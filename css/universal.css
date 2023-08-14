@@ -68,8 +68,8 @@ nav{
 }
 /*-Header Top Right-*/
 .site-theme-btn-container, .shopping-kart-btn-container, .user-account-btn-container{
-    height: 100%;
-    width: auto;
+    height: 50%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
