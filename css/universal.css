@@ -222,7 +222,7 @@ footer{
 }
 .pagamento-divisa, .newsletter-divisa{
     height: 3px;
-    width: 150%;
+    width: 90%;
     background-image: linear-gradient(90deg, var(--azul-claro) 25%, var(--azul-medio) 25%);
 }
 .cartao-container {
@@ -262,4 +262,23 @@ footer{
     color: var(--aqua-claro);
     font-size: 8px;
     background-color: var(--aqua-escuro);
+}
+.cadastro-email{
+    margin-top: 10px;
+    height: 30px;
+    width: 90%;
+    align-items: center;
+    justify-content: start;
+}
+.email {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+}
+.email-titulo{
+    color: var(--cinza-claro);
+}
+.email-text-bottom{
+    height: 60%;
+    width: 150%;
 }
