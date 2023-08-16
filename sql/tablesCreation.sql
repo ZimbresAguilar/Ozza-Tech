@@ -35,7 +35,6 @@ create table pedidos(
 
 create table carrinhos(
 	idCarrinhos int not null auto_increment,
-    quantidade int not null,
     idPedido int not null,
     idCliente int not null,
     primary key(idCarrinhos),
