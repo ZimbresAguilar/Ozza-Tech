@@ -20,14 +20,15 @@
 
 /*-----===HEADER===-----*/
 header{
+    top: 0;
     min-height: 100px;
-    height: 15vh;
+    height: 20vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--azul-escuro);
+    position: sticky;
 }
 
 /*---=Header Top=---*/
@@ -38,8 +39,10 @@ nav, .nav-content, .nav-item{
     justify-content: center;
 }
 .header-top{
+    top: 0;
     height: 40%;
     width: 100%;
+    background-color: var(--azul-escuro);
 }
 .header-top-left, .header-top-right{
     height: 100%;
@@ -93,6 +96,8 @@ nav{
 .header-bottom{
     height: 60%;
     width: 100%;
+    background-color: var(--azul-escuro);
+    transition: opacity 0.2s ease-in-out;
 }
 .search-bar-form{
     height: 50%;
