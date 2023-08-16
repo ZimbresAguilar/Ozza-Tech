@@ -5,16 +5,20 @@
   margin-left: auto;
   border-radius: 2em;
   width: 65%;
-  height: 500px;
+  height: 300px;
   padding: 60px;
   display: table;
-  background-color: var(--azul-medio)
+  background-color: var(--azul-medio);
+  background-image: url('../assets/imagens/login.jpg');
+  background-size: 50% 100%; /* Manter proporção e cobrir altura */
+  background-position: left top; /* Posição da imagem no canto superior esquerdo */
+  background-repeat: no-repeat; /* Evitar repetição da imagem */
 }
 
 .imagen-banner {
-  width: 50%;
-  height: 50%;
-  float: left;
+  background-image: url('caminho/para/sua/imagem.jpg');
+  background-size: 50% auto; /* 50% de largura e altura automática */
+  background-position: left center; /* Posição da imagem no banner */
 }
 
 .banner .texto {
