@@ -1,0 +1,25 @@
+.banner {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 2em;
+  width: 65%;
+  height: 500px;
+  padding: 60px;
+  display: table;
+  background-color: var(--azul-medio)
+}
+
+.imagen-banner {
+  width: 50%;
+  height: 50%;
+  float: left;
+}
+
+.banner .texto {
+    float: right;
+  margin-top: 50px;
+  width: 50%;
+  font-size: 22px;
+}
