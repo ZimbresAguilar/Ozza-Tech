@@ -282,3 +282,17 @@ footer{
     height: 60%;
     width: 150%;
 }
+.search-bar-form-bottom{
+    height: 50%;
+    width: 100%;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+.barra-pesquisa-bottom{
+    height: 100%;
+    width: 10%;
+    background-image: url(../assets/imagens/seta.png);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
