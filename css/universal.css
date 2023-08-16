@@ -20,6 +20,7 @@
 
 /*-----===HEADER===-----*/
 header{
+    top: 0;
     min-height: 100px;
     height: 20vh;
     width: 100%;
@@ -27,7 +28,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--azul-escuro);
+    position: sticky;
 }
 
 /*---=Header Top=---*/
@@ -38,8 +39,10 @@ nav, .nav-content, .nav-item{
     justify-content: center;
 }
 .header-top{
+    top: 0;
     height: 40%;
     width: 100%;
+    background-color: var(--azul-escuro);
 }
 .header-top-left, .header-top-right{
     height: 100%;
@@ -93,10 +96,12 @@ nav{
 .header-bottom{
     height: 60%;
     width: 100%;
+    background-color: var(--azul-escuro);
+    transition: opacity 0.2s ease-in-out;
 }
 .search-bar-form{
     height: 50%;
-    width: 70%;
+    width: 55%;
     border-radius: 2em;
     overflow: hidden;
 }
@@ -211,7 +216,47 @@ footer{
     border-radius: .5em;
     background-color: var(--azul-medio);
 }
-
+.pagamento-titulo, .newsletter-titulo {
+    height: 30px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: var(--aqua-claro);
+    font-size: 14px;
+}
+.pagamento-divisa, .newsletter-divisa{
+    height: 3px;
+    width: 90%;
+    background-image: linear-gradient(90deg, var(--azul-claro) 25%, var(--azul-medio) 25%);
+}
+.cartao-container {
+    margin-top: 10px;
+    height: 200px;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: .5em;
+    background-color: var(--azul-medio);
+}
+.cartao-card-container {
+    height: 40%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartao-card-container a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartao-card{
+    height: 100%;
+}
 /*---=Footer Bottom=---*/
 .footer-bottom{
     height: 30px;
@@ -222,4 +267,37 @@ footer{
     color: var(--aqua-claro);
     font-size: 8px;
     background-color: var(--aqua-escuro);
+}
+.cadastro-email{
+    margin-top: 10px;
+    height: 30px;
+    width: 90%;
+    align-items: center;
+    justify-content: start;
+}
+.email {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+}
+.email-titulo{
+    color: var(--cinza-claro);
+}
+.email-text-bottom{
+    height: 60%;
+    width: 150%;
+}
+.search-bar-form-bottom{
+    height: 50%;
+    width: 100%;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+.barra-pesquisa-bottom{
+    height: 100%;
+    width: 10%;
+    background-image: url(../assets/imagens/seta.png);
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
