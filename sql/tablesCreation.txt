@@ -21,8 +21,7 @@ create table clientes(
     rg varchar(15) not null,
     email varchar(200) not null,
     senha varchar(200) not null,
-    pessoaFisica boolean not null,
-    pessoaJuridica boolean not null,
+    pessoa boolean not null,
     primary key(idClientes)
 );
 
