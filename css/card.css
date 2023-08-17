@@ -1,14 +1,13 @@
 /*--=CONTAINER=--*/
 .container{
     position: relative;
-    min-height: 15em;
-    height: 20%;
+    height: 35em;
     width: 90%;
     overflow: hidden;
 }
 /*--=CABEÇALHO CONTAINER=--*/
 .carrosel-cabecalho {
-    height: 40%;
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,7 +16,7 @@
 /*--=BOTÃO CARROSEL=--*/
 .carrosel-btn {
     width: 100%;
-    height: calc(80% + 60px);
+    height: 85%;
     position: absolute;
     display: flex;
     align-items: center;
@@ -43,7 +42,7 @@
 }
 /*--=CARROSEL==-*/
 .carrosel-visivel{
-    height: 80%;
+    height: 85%;
 }
 .carrosel{
     height: 100%;
@@ -58,20 +57,20 @@
     background-color: #f2f2f2;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    padding: 10px;
+    margin-right: 20px;
     height: 100%;
-    flex: 0 0 20%;
+    flex: 0 0 18%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
 }
 .categoria {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -80,24 +79,40 @@
     cursor: pointer;
 }
 
+.img-container{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.img-container img{
+    height: 100%;
+}
+
+.categoria-conteudo{
+    height: 55%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .card h2 {
     font-family: helvetica;
 	font-size: 24px;
 	margin-bottom: 10px;
 }
 
-.card p {
+.nome {
     font-family: helvetica;
 	font-size: 18px;
 	line-height: 1.5;
 	margin-bottom: 20px;
 }
 
-.card img {
-	width: 100%;
-	height: auto;
-	margin-bottom: 20px;
-}
 .card button{
     border: none;
     border-radius: 5px;
