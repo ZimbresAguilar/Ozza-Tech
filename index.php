@@ -1,3 +1,13 @@
+<?php
+    require "src/DBConnection.php";
+
+    // Query para o primeiro carrossel de itens
+    $sqlLancamentos = "SELECT nome, preco FROM PRODUTOS WHERE idProdutos <= 7";
+    $statement = $pdo->query($sqlLancamentos);
+    // PDO::FETCH_ASSOC -> Retorna um array associativo (toda a linha, como um array)
+    $itens = $statement->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -89,26 +99,27 @@
                 <div class="carrosel-visivel">
                     <div class="carrosel">
 
-                        <div class="card">
-                            <div class="categoria">  
+                        <?php foreach($itens as $item):?>
+                            <div class="card">
+                                <div class="categoria">  
 
-                                <figure class="img-container">
-                                    <img decoding="async" src="https://via.placeholder.com/150" alt="Imagem de exemplo">
-                                </figure>
+                                    <figure class="img-container">
+                                        <img decoding="async" src="<?= "assets/imagens/".$item['imagem']?>" alt="Imagem de exemplo">
+                                    </figure>
 
-                                <div class="categoria-conteudo">
-                                    <span class="nome">
-                                        <h2>Mouse Gamer</h2>
-                                    </span>
-                                    <span class="preço">
-                                        <p>de R$470,05 por:</p>
-                                    </span>
-                                    <button>Saiba mais</button>
+                                    <div class="categoria-conteudo">
+                                        <span class="nome">
+                                            <h2><?= $item['nome'] ?></h2>
+                                        </span>
+                                        <span class="preço">
+                                            <p>de <?= $item['preco'] ?> por:</p>
+                                        </span>
+                                        <button>Saiba mais</button>
+                                    </div>
+
                                 </div>
-
                             </div>
-                        </div>
-
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </section>
