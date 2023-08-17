@@ -29,6 +29,7 @@ header{
     align-items: center;
     justify-content: center;
     position: sticky;
+    z-index: 999;
 }
 
 /*---=Header Top=---*/
@@ -84,7 +85,16 @@ nav{
 .site-theme-btn-container a img, .shopping-kart-btn-container a img, .user-account-btn-container a img{
     height: 100%;
 }
-
+/*--=MAIN=--*/
+article {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 /*---=Header Bottom=---*/
 .header-bottom,
 .search-bar-form, .search-bar{
