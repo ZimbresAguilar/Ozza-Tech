@@ -2,7 +2,7 @@ use ozzatech;
 
 insert into clientes(nome, sobrenome, cpf, rg, email, senha, pessoa) values ("João", "da Silva", "559.665.666.-63", "66.606.696-6", "joaosilva@gmail.com", "joaoSenha", true);
 insert into clientes(nome, sobrenome, cpf, rg, email, senha, pessoa) values ("Pedro", "dos Santos", "559.553.535.-63", "57.377.880-9", "pedrosantos@gmail.com", "pedroSenha", false);
-insert into clientes(nome, sobrenome, cpf, rg, email, senha, pessoa) values ("Gabriel", "Aguilar Paiva", "553.425.098.-40", "59.399.199-9", "gabrielaguilar@gmail.com", "GabrielSenha", false);
+insert into clientes(nome, sobrenome, cpf, rg, email, senha, pessoa) values ("Gabriel", "Aguilar Paiva", "553.425.098.-40", "59.399.199-9", "gabrielaguilar@gmail.com", "gabrielSenha", false);
 insert into clientes(nome, sobrenome, cpf, rg, email, senha, pessoa) values ("Lorenzo", "Oliveira Zimbres", "518.164.418.-05", "50.300.100-7", "lorenzooliveira@gmail.com", "lorenzoSenha", false);
 insert into clientes(nome, sobrenome, cpf, rg, email, senha, pessoa) values ("Anthony", "Rodrigo Caetano Teixeira", "599.765.432.-03", "54.302.190-7", "anthonyrodrigo@gmail.com", "anthonySenha", true);
 insert into clientes(nome, sobrenome, cpf, rg, email, senha, pessoa) values ("Matheus", "Rodrigues da Silva", "191.161.131.-11", "51.101.191-1", "matheusrodrigues@gmail.com", "matheusSenha", false);
