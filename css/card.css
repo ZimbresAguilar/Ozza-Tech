@@ -1,0 +1,93 @@
+/*--=CONTAINER=--*/
+.container{
+    position: relative;
+    min-height: 15em;
+    height: 20%;
+    width: 90%;
+    overflow: hidden;
+}
+/*--=CABEÇALHO CONTAINER=--*/
+.carrosel-cabecalho {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+/*--=BOTÃO CARROSEL=--*/
+.carrosel-btn {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.prvItem,
+.nxtItem {
+    height: 2em;
+    width: 2em;
+    border: solid 2px lightgray;
+    border-radius: 1.5em;
+    color: dodgerblue;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: white;
+    cursor: pointer;
+}
+
+.prvItem.disabled,
+.nxtItem.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+/*--=CARROSEL==-*/
+.carrosel-visivel{
+    height: 80%;
+}
+.carrosel{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+/*--==CARD==--*/
+.card {
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	margin: 20px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.card h2 {
+    font-family: helvetica;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.card p {
+    font-family: helvetica;
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.card img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+.card button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+}
