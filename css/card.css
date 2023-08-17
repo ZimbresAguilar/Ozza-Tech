@@ -54,7 +54,7 @@
 }
 /*--==CARD==--*/
 .card {
-    background-color: #f2f2f2;
+    background-color: var(--azul-medio);
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin-right: 20px;
@@ -100,13 +100,14 @@
     justify-content: center;
 }
 
-.card h2 {
+.nome {
     font-family: helvetica;
-	font-size: 24px;
+	font-size: 18px;
 	margin-bottom: 10px;
+    color: var(--aqua-claro);
 }
 
-.nome {
+. {
     font-family: helvetica;
 	font-size: 18px;
 	line-height: 1.5;
