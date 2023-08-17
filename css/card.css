@@ -118,12 +118,14 @@
 }
 .preco-depois{
 	font-size: 24px;
+    color: var(--aqua-medio);
 }
 
 .vista {
     font-family: helvetica;
 	font-size: 18px;
 	line-height: 1.5;
+    color: var(--aqua-medio);
 }
 
 .categoria-buttons{
