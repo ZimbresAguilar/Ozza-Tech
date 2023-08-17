@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*-----===VARIABLES===-----*/
+:root {
+    --cinza-claro: #d6d6d6;
+    --cinza-escuro: #0f0f0f;
+    --azul-escuro: #11151c;
+    --azul-medio: #171a21;
+    --azul-claro: #364156;
+    --aqua-escuro: #3d7068;
+    --aqua-medio: #33d9c5;
+    --aqua-claro: #b9f4f3;
+
+    background-color: var(--cinza-escuro);
+
+    font-family: 'Krona One', sans-serif;
+}
+
+/*-----===HEADER===-----*/
+
+header {
+    min-height: 100px;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul-escuro);
+}
+
+/*---=Header Top=---*/
+.header-top,
+.header-top-left,
+.header-top-right,
+nav,
+.nav-content,
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-top {
+    height: 40%;
+    width: 100%;
+}
+
+.header-top-left,
+.header-top-right {
+    height: 100%;
+    width: 25%;
+}
+
+/*-Header Top Left-*/
+/*-Header Top Center-*/
+nav {
+    height: 100%;
+    width: 50%;
+}
+
+.nav-content {
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.nav-item {
+    height: 100%;
+    width: auto;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--aqua-claro);
+    font-size: 15px;
+}
+
+/*-Header Top Right-*/
+.site-theme-btn-container,
+.shopping-kart-btn-container,
+.user-account-btn-container {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-theme-btn-container a,
+.shopping-kart-btn-container a,
+.user-account-btn-container a {
+    height: 100%;
+    width: 100%;
+}
+
+.site-theme-btn-container a img,
+.shopping-kart-btn-container a img,
+.user-account-btn-container a img {
+    height: 100%;
+}
+
+/*---=Header Bottom=---*/
+.header-bottom,
+.search-bar-form,
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-bottom {
+    height: 60%;
+    width: 100%;
+}
+
+.search-bar-form {
+    height: 50%;
+    width: 70%;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.search-bar {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.search-bar-content {
+    height: 100%;
+    width: 90%;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+    font-family: 'Krona One', sans-serif;
+    font-size: 14px;
+}
+
+.search-bar-submit {
+    height: 100%;
+    width: 10%;
+    background-color: var(--azul-claro);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+#mais {
+    display: none;
+}
+
+/*---=codigo que está ocultando aquela metade do texto=---*/
+
+div .container {
+    display: flex;
+    align-items: center;
+}
+
+/*---=aqui é para deixar o texto centralizado=---*/
+
+.historia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 70%;
+}
+
+/*---=aqui é para não só deixar o texto inteiro centralizado, mas tambem deixar ele cobrindo uma quantidade menor da tela, para o usuario pode ler sem preocupação=---*/
+
+.seta {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*---=aqui é para deixar a imagem da seta no canto da tela=---*/
+
+div.img {
+    display: flex;
+    width: 56px;
+    height: 46px;
+}
+
+/*---=aqui é para deixar a imagem em um tamanho que caiba no site e para que o usuario consiga enxerga-la=---*/
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}/*---=aqui é para o botão uma pequena animação de grandeza, ele irá aumentar um pouco para o usuario ter certeza do que está escolhendo=---*/
