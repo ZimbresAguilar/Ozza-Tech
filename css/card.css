@@ -92,7 +92,7 @@
 }
 
 .categoria-conteudo{
-    height: 55%;
+    height: 45%;
     width: 95%;
     display: flex;
     flex-direction: column;
@@ -103,18 +103,30 @@
 .nome {
     font-family: helvetica;
 	font-size: 24px;
-	margin-bottom: 10px;
     color: var(--aqua-claro);
 }
+.preco-antes{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    color: var(--aqua-escuro);
+}
+.preço-final {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+}
+.preco-depois{
+	font-size: 24px;
+}
 
-. {
+.vista {
     font-family: helvetica;
 	font-size: 18px;
 	line-height: 1.5;
-	margin-bottom: 20px;
 }
 
-.card button{
+.categoria-buttons{
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
