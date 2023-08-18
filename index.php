@@ -2,10 +2,8 @@
     //-----===Referenciando arquivos===-----
     // Conexão com o banco de dados
     require "src/DBConnectionLocal.php";
-
     // Classe produtos
     require "src/Model/produto.php";
-
     // Classe produtos do banco de dados
     require "src/Controller/produtoRepositorio.php";
 
@@ -105,52 +103,27 @@
 
                 <div class="carrosel-visivel">
                     <div class="carrosel">
+                        
+                            <?php foreach($itens as $item):?>
+                                <div class="card">
+                                    <div class="categoria">  
+                                        <figure class="img-container">
+                                            <img decoding="async" src="<?=$item->getImagem()?>" alt="Imagem de exemplo">
+                                        </figure>
 
-<<<<<<< HEAD:index.html
-                        <div class="card">
-                            <div class="categoria">
-=======
-                        <?php foreach($itens as $item):?>
-                            <div class="card">
-                                <div class="categoria">  
->>>>>>> BackEnd:index.php
-
-                                    <figure class="img-container">
-                                        <img decoding="async" src="<?= $item->getImagemFormatado() ?>" alt="Imagem de exemplo">
-                                    </figure>
-
-                                    <div class="categoria-conteudo">
-                                        <span class="nome">
-                                            <h2><?= $item->getNome() ?></h2>
-                                        </span>
-                                        <span class="preço">
-                                            <!--Number format, formata o número (float) para quantas casas forem informadas no parâmetro-->
-                                            <p>de R$ <?= $item->getPrecoFormatado() ?> por:</p>
-                                        </span>
-                                        <button>Saiba mais</button>
-                                    </div>
-
-<<<<<<< HEAD:index.html
-                                <div class="categoria-conteudo">
-                                    <h2 class="nome">Mouse Gamer</h2>
-                                    <span class="preço">
-                                        <p class="preco-antes">de R$470,05 por:</p>
-                                        <div class="preço-final">
-                                            <span class="vista">a vista:</span>
-                                            <p class="preco-depois">R$470,05</p>
+                                        <div class="categoria-conteudo">
+                                            <span class="nome">
+                                                <h2><?= $item->getNome() ?></h2>
+                                            </span>
+                                            <span class="preço">
+                                                <!--Number format, formata o número (float) para quantas casas forem informadas no parâmetro-->
+                                                <p>de R$ <?= $item->getPrecoFormatado()?> por:</p>
+                                            </span>
+                                            <button>Saiba mais</button>
                                         </div>
-                                        i <p class="pix">no PIX com 15% de desconto</p>
-                                    </span>
+                                    </div>
                                 </div>
-                                <div class="categoria-buttons">
-                                    <button>Saiba mais</button>
-                                </div>
-                            </div>
-=======
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
->>>>>>> BackEnd:index.php
+                            <?php endforeach; ?>
 
                         </div>
                     </div>
