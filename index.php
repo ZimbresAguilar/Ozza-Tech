@@ -1,13 +1,13 @@
 <?php
     //-----===Referenciando arquivos===-----
     // Conexão com o banco de dados
-    require "src/DBConnectionLocal.php";
+    require "src/local/DBConnectionLocal.php";
 
     // Classe produtos
-    require "src/Model/produto.php";
+    require "src/local/Model/produto.php";
 
     // Classe produtos do banco de dados
-    require "src/Controller/produtoRepositorio.php";
+    require "src/local/Controller/produtoRepositorio.php";
 
     // Pega $pdo (cariavel de conexão com BD) pelo DBConnections e manda para produtoRepositorio
     $produtoRepositorio = new produtoRepositorio($pdo);
