@@ -10,6 +10,7 @@ create table produtos(
     origem boolean not null,
     localizacao varchar(50) not null,
     quantidade int not null,
+    imagem varchar(150) not null,
     primary key(idProdutos)
 );
 

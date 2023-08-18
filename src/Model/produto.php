@@ -66,8 +66,5 @@
         public function getImagem(): string{
             return $this->imagem;
         }
-        public function getImagemFormatado(): string{
-            return "assets/imagens/produtos".$this->imagem;
-        }
     }
 ?>
