@@ -1,5 +1,5 @@
 <?php
-
+    // Classe para gerenciar os dados do banco de dados dentro da aplicação
     // Criando classe e declarando atributos
     // Classe
     class Produto{
@@ -13,9 +13,10 @@
         private bool $origem;
         private string $localizacao;
         private int $quantidade;
+        private string $imagem;
 
         // CONSTRUTOR
-        public function __construct(int $idProdutos, string $nome, float $preco, string $marca, string $cor, string $condicao, bool $origem, string $localizacao, int $quantidade) {
+        public function __construct(int $idProdutos, string $nome, float $preco, string $marca, string $cor, string $condicao, bool $origem, string $localizacao, int $quantidade, string $imagem) {
             $this->idProdutos = $idProdutos;
             $this->nome = $nome;
             $this->preco = $preco;
@@ -25,6 +26,7 @@
             $this->origem = $origem;
             $this->localizacao = $localizacao;
             $this->quantidade = $quantidade;
+            $this->imagem = $imagem;
         }
 
         //GETTERS
@@ -34,9 +36,14 @@
         public function getNome(): string {
             return $this->nome;
         }
+
         public function getPreco(): float {
             return $this->preco;
         }
+        public function getPrecoFormatado(): string{
+            return number_format($this->preco, 2);
+        }
+
         public function getMarca(): string {
             return $this->marca;
         }
@@ -54,6 +61,13 @@
         }
         public function getQuantidade(): int {
             return $this->quantidade;
+        }
+
+        public function getImagem(): string{
+            return $this->imagem;
+        }
+        public function getImagemFormatado(): string{
+            return "assets/imagens/".$this->imagem;
         }
     }
 ?>
