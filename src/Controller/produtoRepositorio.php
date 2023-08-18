@@ -24,7 +24,7 @@
             }, $itens);
             // Agora é um array de objetos, não um array de array
 
-            return $itens;
+            return $dadosItens;
         }
     }
 ?>
