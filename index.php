@@ -12,6 +12,8 @@
     // Pega $pdo (cariavel de conexão com BD) pelo DBConnections e manda para produtoRepositorio
     $produtoRepositorio = new produtoRepositorio($pdo);
     $itens = $produtoRepositorio->chamarProdutos();
+
+    var_dump($itens);
 ?>
 
 <!DOCTYPE html>
