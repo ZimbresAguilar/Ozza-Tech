@@ -4,6 +4,10 @@
     height: 35em;
     width: 90%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 /*--=CABEÇALHO CONTAINER=--*/
 .carrosel-cabecalho {
@@ -43,6 +47,8 @@
 /*--=CARROSEL==-*/
 .carrosel-visivel{
     height: 85%;
+    z-index: 999;
+    width: calc(100% - 75px);
 }
 .carrosel{
     height: 100%;
@@ -76,18 +82,17 @@
     height: 100%;
     text-align: center;
     transition: .3s;
-    cursor: pointer;
 }
 
-.img-container{
+.categoria-container{
     width: 100%;
-    height: 40%;
+    height: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
-.img-container img{
+.categoria-container img{
     height: 100%;
 }
 
@@ -127,11 +132,37 @@
 	line-height: 1.5;
     color: var(--aqua-medio);
 }
+.pix{
+    color: var(--aqua-claro);
+}
+.compras-button{
+    height: 8%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.comprar-button {
+    height: 100%;
+    width: 50%;
+    border-radius: .3em;
+    cursor: pointer;
+    background: var(--azul-claro);
+}
 
 .categoria-buttons{
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    background-color: blue;
-    color: white;
+    height: 100%;
+    width: 25%;
+    background-color: var(--aqua-escuro);
+    border-radius: .3em;
+  
+}
+.categoria-buttons a{
+    height: 100%;
+    width: 30%;
+    cursor: pointer;
+}
+.categoria-buttons a img{
+    height: 100%;
+
 }
