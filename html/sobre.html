@@ -162,12 +162,14 @@
         </div>
     </main>
     </div>
-    <button onclick="leiaMais()" id="btnLeiaMais">Leia Mais</button><!--local do botão "leiaMais" com id-->
+    <button onclick="leiaMais()" id="btnLeiaMais" class="scroll-down-button">Leia Mais</button><!--local do botão "leiaMais" com id-->
     <script type="text/javascript" src="../js/headerScroll.js"></script><!--link do script-->
     <div class="seta">
         <div class="img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmrvEeZSxoxkhuUJP3IDoHIjEvSmdwJCU9vg&usqp=CAU"
-                alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmrvEeZSxoxkhuUJP3IDoHIjEvSmdwJCU9vg&usqp=CAU" class="clikable-image"
+                alt="imagem clicavel" onclick="scrollToTop()">
+                <button class="scroll-top-button" onclick="scrollToTop()"></button>
+                <h6>clique aqui para voltar ao inicio</h6>
         </div>
     </div><!--divs da imagem da seta para cima-->
 </body>

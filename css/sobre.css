@@ -188,14 +188,21 @@ div .container {
 
 /*---=aqui é para deixar a imagem da seta no canto da tela=---*/
 
-div.img {
+.clikable-image {
     display: flex;
     width: 56px;
-    height: 46px;
+    height: 46;
+    cursor: pointer;
 }
 
 /*---=aqui é para deixar a imagem em um tamanho que caiba no site e para que o usuario consiga enxerga-la=---*/
 button:hover {
     transform: scale(1.1);
     transition: all 0.5s;
+    cursor:pointer;
+    transition: opacity 0.3 ease;
 }/*---=aqui é para o botão uma pequena animação de grandeza, ele irá aumentar um pouco para o usuario ter certeza do que está escolhendo=---*/
+
+h6{
+    color: white;
+}
