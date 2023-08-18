@@ -1,3 +1,19 @@
+<?php
+    //-----===Referenciando arquivos===-----
+    // Conexão com o banco de dados
+    require "src/DBConnectionLocal.php";
+
+    // Classe produtos
+    require "src/Model/produto.php";
+
+    // Classe produtos do banco de dados
+    require "src/Controller/produtoRepositorio.php";
+
+    // Pega $pdo (cariavel de conexão com BD) pelo DBConnections e manda para produtoRepositorio
+    $produtoRepositorio = new produtoRepositorio($pdo);
+    $itens = $produtoRepositorio->chamarProdutos();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -89,25 +105,28 @@
                 <div class="carrosel-visivel">
                     <div class="carrosel">
 
-                        <div class="card">
-                            <div class="categoria">  
+                        <?php foreach($itens as $item):?>
+                            <div class="card">
+                                <div class="categoria">  
 
-                                <figure class="img-container">
-                                    <img decoding="async" src="https://via.placeholder.com/150" alt="Imagem de exemplo">
-                                </figure>
+                                    <figure class="img-container">
+                                        <img decoding="async" src="<?= $item->getImagemFormatado() ?>" alt="Imagem de exemplo">
+                                    </figure>
 
-                                <div class="categoria-conteudo">
-                                    <span class="nome">
-                                        <h2>Mouse Gamer</h2>
-                                    </span>
-                                    <span class="preço">
-                                        <p>de R$470,05 por:</p>
-                                    </span>
-                                    <button>Saiba mais</button>
+                                    <div class="categoria-conteudo">
+                                        <span class="nome">
+                                            <h2><?= $item->getNome() ?></h2>
+                                        </span>
+                                        <span class="preço">
+                                            <!--Number format, formata o número (float) para quantas casas forem informadas no parâmetro-->
+                                            <p>de R$ <?= $item->getPrecoFormatado() ?> por:</p>
+                                        </span>
+                                        <button>Saiba mais</button>
+                                    </div>
+
                                 </div>
-
                             </div>
-                        </div>
+                        <?php endforeach; ?>
 
                     </div>
                 </div>
