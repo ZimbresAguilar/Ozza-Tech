@@ -67,7 +67,7 @@
             return $this->imagem;
         }
         public function getImagemFormatado(): string{
-            return "assets/imagens/produtos".$this->imagem;
+            return "assets/imagens/produtos/".$this->imagem;
         }
     }
 ?>
