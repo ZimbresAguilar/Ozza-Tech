@@ -1,11 +1,23 @@
 <?php
+    //-----===Referenciando arquivos===-----
+    // Conexão com o banco de dados
     require "src/DBConnection.php";
+    // Classe produtos
+    require "src/Model/produto.php";
 
+    // -----===QUERY===-----
     // Query para o primeiro carrossel de itens
-    $sqlLancamentos = "SELECT nome, preco FROM PRODUTOS WHERE idProdutos <= 7";
+    $sqlLancamentos = "SELECT * FROM produtos WHERE idProdutos <= 7";
     $statement = $pdo->query($sqlLancamentos);
-    // PDO::FETCH_ASSOC -> Retorna um array associativo (toda a linha, como um array)
+    // PDO::FETCH_ASSOC -> Retorna um array associativo (toda a linha, como um array de arrays)
     $itens = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    // -----===Transformando cada índice da query em um OBJETO da Classe Produtos===-----
+    // array_map() -> Ensinar o que fazer para cada um dos elementos do array mencionado
+    $dadosItens = array_map(function ($item){
+        return new Produto($item['idProdutos'], $item['nome'], $item['preco'], $item['marca'], $item['cor'], $item['condicao'], $item['origem'], $item['localizacao'], $item['quantidade'],);
+    }, $itens);
+    // Agora é um array de objetos, não um array de array
 ?>
 
 <!DOCTYPE html>
@@ -99,20 +111,21 @@
                 <div class="carrosel-visivel">
                     <div class="carrosel">
 
-                        <?php foreach($itens as $item):?>
+                        <?php foreach($dadosItens as $item):?>
                             <div class="card">
                                 <div class="categoria">  
 
                                     <figure class="img-container">
-                                        <img decoding="async" src="<?= "assets/imagens/".$item['imagem']?>" alt="Imagem de exemplo">
+                                        <img decoding="async" src="<?= "assets/imagens/".$item->getQuantidade() ?>" alt="Imagem de exemplo">
                                     </figure>
 
                                     <div class="categoria-conteudo">
                                         <span class="nome">
-                                            <h2><?= $item['nome'] ?></h2>
+                                            <h2><?= $item->getNome() ?></h2>
                                         </span>
                                         <span class="preço">
-                                            <p>de <?= $item['preco'] ?> por:</p>
+                                            <!--Number format, formata o número (float) para quantas casas forem informadas no parâmetro-->
+                                            <p>de R$ <?= number_format($item->getPreco(), 2) ?> por:</p>
                                         </span>
                                         <button>Saiba mais</button>
                                     </div>
