@@ -12,8 +12,6 @@
     // Pega $pdo (cariavel de conexão com BD) pelo DBConnections e manda para produtoRepositorio
     $produtoRepositorio = new produtoRepositorio($pdo);
     $itens = $produtoRepositorio->chamarProdutos();
-
-    var_dump($itens);
 ?>
 
 <!DOCTYPE html>
@@ -112,7 +110,7 @@
                                 <div class="categoria">  
 
                                     <figure class="img-container">
-                                        <img decoding="async" src="<?= $item->getImagemFormatado() ?>" alt="Imagem de exemplo">
+                                        <img decoding="async" src="assets/imagens/produtos/<?= $item->getImagem() ?>" alt="Imagem de exemplo">
                                     </figure>
 
                                     <div class="categoria-conteudo">
