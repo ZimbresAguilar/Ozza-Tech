@@ -65,7 +65,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin-right: 20px;
     height: 100%;
-    flex: 0 0 23%;
+    flex: 0 0 18%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,8 +97,13 @@
 }
 
 .categoria-conteudo{
+<<<<<<< HEAD
     height: 42%;
     width: 90%;
+=======
+    height: 45%;
+    width: 95%;
+>>>>>>> parent of f3f0bbc (foi adicionado foto dos produtos)
     display: flex;
     flex-direction: column;
     align-items: center;
