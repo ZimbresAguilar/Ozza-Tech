@@ -2,7 +2,6 @@
     //-----===Referenciando arquivos===-----
     // Conexão com o banco de dados
     require "src/DBConnectionLocal.php";
-
     // Classe produtos
     require "src/Model/produto.php";
     // Classe produtos do banco de dados
@@ -264,11 +263,12 @@
                                         </figure>
                                     </div>
                                 </div>
-                            </div>
-                        <?php endforeach; ?>
+                            <?php endforeach; ?>
 
                         </div>
                     </div>
+
+                </div>
                 </div>
             </section>
         </article>
@@ -394,6 +394,50 @@
                         </figure>
                     </div>
 
+                <div class="caixa-pagamento">
+
+                    <div class="pagamento-titulo">PAGAMENTO</div>
+    
+                    <div class="pagamento-divisa"></div>
+    
+                    <div class="cartao-container">
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/dinners.png" alt="Diners">
+                            </a>
+                        </figure>
+    
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/maestro.png" alt="Express">
+                            </a>
+                        </figure>
+    
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/pngwing.com.png" alt="Maestro">
+                            </a>
+                        </figure>
+    
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/Mastercard.png" alt="Maestro">
+                            </a>
+                        </figure>
+    
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/visa.png" alt="Maestro">
+                            </a>
+                        </figure>
+    
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/santander.png" alt="Maestro">
+                            </a>
+                        </figure>
+    
+                    </div>
                 </div>
 
                 <div class="footer-duplo-newsletter">

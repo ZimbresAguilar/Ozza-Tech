@@ -152,6 +152,21 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.preco-antes{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    color: var(--aqua-escuro);
+}
+.preço-final {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+}
+.preco-depois{
+	font-size: 24px;
+    color: var(--aqua-medio);
+}
 
 .preco{
     width: 100%;
