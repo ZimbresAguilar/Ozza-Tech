@@ -3,7 +3,7 @@
     position: relative;
     min-height: 35em;
     height: 50vh;
-    width: 97.5%;
+    width: 95%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -116,7 +116,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: white;
+    background-color: var(--cinza-claro);
 }
 .categoria-container img{
     height: 100%;
