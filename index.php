@@ -1,3 +1,19 @@
+<?php
+    //-----===Referenciando arquivos===-----
+    // Conexão com o banco de dados
+    require "src/DBConnectionLocal.php";
+
+    // Classe produtos
+    require "src/Model/produto.php";
+
+    // Classe produtos do banco de dados
+    require "src/Controller/produtoRepositorio.php";
+
+    // Pega $pdo (cariavel de conexão com BD) pelo DBConnections e manda para produtoRepositorio
+    $produtoRepositorio = new produtoRepositorio($pdo);
+    $itens = $produtoRepositorio->chamarProdutos();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -54,7 +70,7 @@
                 </figure>
 
                 <figure class="user-account-btn-container">
-                    <a href="html/login.html">
+                    <a href="html/login.php">
                         <img src="assets/icones/202-2024792_user-profile-icon-png-download-fa-user-circle.png" alt="">
                     </a>
                 </figure>
@@ -81,53 +97,64 @@
                     <h2>Lançamento</h2>
                 </div>
 
-                <div class="carrosel-btn">
-                    <button type="button" class="prvItem">
-                        < </button>
-                            <button type="button" class="nxtItem"> > </button>
-                </div>
-
-                <div class="carrosel-visivel">
-                    <div class="carrosel">
-
-                        <div class="card">
-                            <div class="categoria">
-
-                                <figure class="categoria-container">
-                                    <img decoding="async" src="https://via.placeholder.com/150" alt="Imagem de exemplo">
-                                </figure>
-
-                                <div class="categoria-conteudo">
-                                    <h2 class="nome">Mouse Gamer</h2>
-                                    <span class="preço">
-                                        <p class="preco-antes">de R$470,05 por:</p>
-                                        <div class="preço-final">
-                                            <span class="vista">a vista:</span>
-                                            <p class="preco-depois">R$470,05</p>
-                                        </div>
-<<<<<<< HEAD
-                                        <p class="pix">no PIX com 15% de desconto</p>
-=======
->>>>>>> parent of f3f0bbc (foi adicionado foto dos produtos)
-                                    </span>
-                                </div>
-                                <div class="compras-button">
-                                    <button type="submit" class="comprar-button">COMPRAR</button>
-                                    <figure class="categoria-buttons">
-                                        <a href="">
-                                            <img src="assets/imagens/carrinho.png" alt="">
-                                        </a>
+                <div class="carrossel-conteudo">
+                    <div class="carrosel-btn">
+                        <button type="button" class="prvItem">
+                            < </button>
+                                <button type="button" class="nxtItem"> > </button>
+                    </div>
+    
+                    <div class="carrosel-visivel">
+                        <div class="carrosel">
+    
+                        <?php foreach($itens as $item):?>
+                            <div class="card">
+                                <div class="categoria">
+    
+                                    <figure class="categoria-container">
+                                        <img decoding="async" src="assets/imagens/produtos/<?=$item->getImagem()?>" alt="Imagem de exemplo">
                                     </figure>
+    
+                                    <div class="categoria-conteudo">
+                                        <div class="nome-container">
+                                            <h2 class="nome"> <?=$item->getNome()?> </h2>
+                                        </div> 
+
+                                        <div class="preco">
+                                            <div class="preco-antes">
+                                                <p>De R$ <?=($item->getPreco() + 100.00)?> por:</p>
+                                            </div>
+
+                                            <div class="preço-final">
+                                                <span class="vista">À vista:</span>
+                                                <p class="preco-depois">R$<?=$item->getPrecoFormatado()?></p>
+                                            </div>
+
+                                            <div class="pix">
+                                                <p>No PIX com 15% de desconto</p>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="compras-button">
+                                        <button type="submit" class="comprar-button">COMPRAR</button>
+                                        <figure class="categoria-buttons">
+                                            <a href="">
+                                                <img src="assets/icones/1413908.png" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
                                 </div>
                             </div>
-
+                        <?php endforeach; ?>
                         </div>
                     </div>
+                </div>
 
-                </div>
-                </div>
+
             </section>
         </article>
+
     </main>
 
     <footer>
@@ -205,116 +232,82 @@
             </div>
 
             <div class="footer-top-duplo">
-                <div class="pagamento-titulo">PAGAMENTO</div>
 
-                <div class="pagamento-divisa"></div>
-
-                <div class="cartao-container">
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/dinners.png" alt="Diners">
-                        </a>
-                    </figure>
-
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/maestro.png" alt="Express">
-                        </a>
-                    </figure>
-
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/pngwing.com.png" alt="Maestro">
-                        </a>
-                    </figure>
-
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/Mastercard.png" alt="Maestro">
-                        </a>
-                    </figure>
-
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/visa.png" alt="Maestro">
-                        </a>
-                    </figure>
-
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/santander.png" alt="Maestro">
-                        </a>
-                    </figure>
-
-<<<<<<< HEAD
+                <div class="footer-duplo-pagamento">
                     <div class="pagamento-titulo">PAGAMENTO</div>
-
+    
                     <div class="pagamento-divisa"></div>
-
+    
                     <div class="cartao-container">
                         <figure class="cartao-card-container">
                             <a href="">
                                 <img class="cartao-card" src="assets/imagens/dinners.png" alt="Diners">
                             </a>
                         </figure>
-
+    
                         <figure class="cartao-card-container">
                             <a href="">
                                 <img class="cartao-card" src="assets/imagens/maestro.png" alt="Express">
                             </a>
                         </figure>
-
+    
                         <figure class="cartao-card-container">
                             <a href="">
                                 <img class="cartao-card" src="assets/imagens/pngwing.com.png" alt="Maestro">
                             </a>
                         </figure>
-
+    
                         <figure class="cartao-card-container">
                             <a href="">
                                 <img class="cartao-card" src="assets/imagens/Mastercard.png" alt="Maestro">
                             </a>
                         </figure>
-
+    
                         <figure class="cartao-card-container">
                             <a href="">
                                 <img class="cartao-card" src="assets/imagens/visa.png" alt="Maestro">
                             </a>
                         </figure>
-
+    
                         <figure class="cartao-card-container">
                             <a href="">
                                 <img class="cartao-card" src="assets/imagens/santander.png" alt="Maestro">
                             </a>
                         </figure>
-
                     </div>
-=======
->>>>>>> parent of f3f0bbc (foi adicionado foto dos produtos)
+
                 </div>
 
-                <div class="caixa-newsletter">
-
+                <div class="footer-duplo-newsletter">
                     <div class="newsletter-titulo">NEWSLETTER</div>
 
                     <div class="newsletter-divisa"></div>
 
                     <div class="cadastro-email">
                         <div class="email">
-                            <div class="email-titulo">Receba ofertas exclusivas no seu e-mail</div>
-                            <div class="email-text-bottom">
-                                <form action="" method="post" class="search-bar-form-bottom">
-                                    <fieldset class="search-bar">
-                                        <input type="text" name="search-bar-content" class="search-bar-content"
-                                            id="search-bar-content" placeholder="E-mail">
-                                        <input type="submit" value="" name="search-bar-submit"
-                                            class="barra-pesquisa-bottom" id="barra-pesquisa-bottom">
-                                    </fieldset>
-                                </form>
+                            <div class="email-titulo">
+                                <h2>Receba ofertas exclusivas no seu e-mail</h2>
                             </div>
+
+                            <form action="" method="post" id="form-cadastro-email" class="form-cadastro-email">
+
+                                <fieldset class="fieldset-email">
+                                    <input type="text" name="input-cadastro-email" class="input-cadastro-email" id="input-cadastro-email" placeholder="E-mail">
+
+                                    <!--
+                                    <input type="submit" value="" name="input-cadastro-email-btn" class="input-cadastro-email-btn" id="input-cadastro-email-btn">
+                                    -->
+                                    
+                                    <button type="submit" name="input-cadastro-email-btn" class="input-cadastro-email-btn" id="input-cadastro-email-btn">
+                                        <img src="../assets/imagens/seta.png" alt="">
+                                    </button>
+                                </fieldset>
+
+                            </form>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 

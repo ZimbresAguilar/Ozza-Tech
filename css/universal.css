@@ -77,6 +77,9 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* Temporariamente (usar Krita) */
+    filter: invert();
 }
 .site-theme-btn-container a, .shopping-kart-btn-container a, .user-account-btn-container a{
     height: 100%;
@@ -85,6 +88,7 @@ nav{
 .site-theme-btn-container a img, .shopping-kart-btn-container a img, .user-account-btn-container a img{
     height: 100%;
 }
+
 /*--=MAIN=--*/
 article {
     height: 100%;
@@ -137,6 +141,7 @@ article {
     border: none;
     cursor: pointer;
 }
+
 
 /*-----===FOOTER===-----*/
 footer{
@@ -226,17 +231,13 @@ footer{
     border-radius: .5em;
     background-color: var(--azul-medio);
 }
-.caixa-pagamento{
-    height: 48%;
-    width: 95%;
 
-}
-.caixa-newsletter {
-    height: 48%;
-    width: 95%;
-}
+.footer-duplo-pagamento{height: 43%;}
+.footer-duplo-newsletter{height: 53%;}
+.footer-duplo-pagamento, .footer-duplo-newsletter{width: 95%;}
+
 .pagamento-titulo, .newsletter-titulo {
-    height: 30px;
+    height: 35px;
     width: 90%;
     display: flex;
     align-items: center;
@@ -249,9 +250,11 @@ footer{
     width: 90%;
     background-image: linear-gradient(90deg, var(--azul-claro) 25%, var(--azul-medio) 25%);
 }
+
+/*-Pagamento-*/
 .cartao-container {
-    height: 75%;
-    width: auto;
+    height: calc(100% - 35px);
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -275,6 +278,73 @@ footer{
 .cartao-card{
     height: 100%;
 }
+
+/*-Newsletter-*/
+.cadastro-email{
+    height: 50%;
+    width: 100%;
+}
+.email {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+}
+.email-titulo{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.email-titulo h2{
+    font-size: 12px;
+    color: var(--cinza-claro);
+}
+.form-cadastro-email{
+    height: 55%;
+    width: 100%;
+}
+.fieldset-email{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.input-cadastro-email{
+    height: 100%;
+    width: 85%;
+    padding: 0 15px;
+    font-family: 'Krona One', sans-serif;
+    font-size: 12px;
+    outline: none;
+    border: none;
+}
+.input-cadastro-email-btn{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul-claro);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.input-cadastro-email-btn img{
+    height: 80%;
+    width: 60%;
+}
+
+
 /*---=Footer Bottom=---*/
 .footer-bottom{
     height: 30px;
@@ -285,37 +355,4 @@ footer{
     color: var(--aqua-claro);
     font-size: 8px;
     background-color: var(--aqua-escuro);
-}
-.cadastro-email{
-    margin-top: 10px;
-    height: 30px;
-    width: 90%;
-    align-items: center;
-    justify-content: start;
-}
-.email {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100px;
-}
-.email-titulo{
-    color: var(--cinza-claro);
-}
-.email-text-bottom{
-    height: 60%;
-    width: 150%;
-}
-.search-bar-form-bottom{
-    height: 50%;
-    width: 100%;
-    border-radius: 0.5em;
-    overflow: hidden;
-}
-.barra-pesquisa-bottom{
-    height: 100%;
-    width: 10%;
-    background-image: url(../assets/imagens/seta.png);
-    outline: none;
-    border: none;
-    cursor: pointer;
 }
