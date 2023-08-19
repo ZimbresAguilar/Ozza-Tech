@@ -7,6 +7,7 @@
         private int $idProdutos;
         private string $nome;
         private float $preco;
+        private float $promocao;
         private string $marca;
         private string $cor;
         private string $condicao;
@@ -16,10 +17,11 @@
         private string $imagem;
 
         // CONSTRUTOR
-        public function __construct(int $idProdutos, string $nome, float $preco, string $marca, string $cor, string $condicao, bool $origem, string $localizacao, int $quantidade, string $imagem) {
+        public function __construct(int $idProdutos, string $nome, float $preco, float $promocao, string $marca, string $cor, string $condicao, bool $origem, string $localizacao, int $quantidade, string $imagem) {
             $this->idProdutos = $idProdutos;
             $this->nome = $nome;
             $this->preco = $preco;
+            $this->promocao = $promocao;
             $this->marca = $marca;
             $this->cor = $cor;
             $this->condicao = $condicao;
@@ -42,6 +44,10 @@
         }
         public function getPrecoFormatado(): string{
             return number_format($this->preco, 2);
+        }
+
+        public function getPromocao(): float{
+            return $this->promocao;
         }
 
         public function getMarca(): string {
