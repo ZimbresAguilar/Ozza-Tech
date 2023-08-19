@@ -70,7 +70,7 @@
                 </figure>
 
                 <figure class="user-account-btn-container">
-                    <a href="html/login.html">
+                    <a href="html/login.php">
                         <img src="assets/icones/202-2024792_user-profile-icon-png-download-fa-user-circle.png" alt="">
                     </a>
                 </figure>
