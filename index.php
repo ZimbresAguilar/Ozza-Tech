@@ -79,7 +79,7 @@
             </div>
         </div>
 
-        <div class="header-bottom">
+        <div id="header-bottom" class="header-bottom">
             <form action="" method="post" class="search-bar-form">
                 <fieldset class="search-bar">
                     <input type="text" name="search-bar-content" class="search-bar-content" id="search-bar-content"
@@ -436,6 +436,6 @@
     </footer>
 </body>
 <script src="js/headerScroll.js"></script>
-<script src="js/carrosel.js"></script>
+<script src="js/carroselCards.js"></script>
 
 </html>

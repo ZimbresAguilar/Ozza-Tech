@@ -89,16 +89,6 @@ nav{
     height: 100%;
 }
 
-/*--=MAIN=--*/
-article {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
 /*---=Header Bottom=---*/
 .header-bottom,
 .search-bar-form, .search-bar{
@@ -111,7 +101,7 @@ article {
     height: 60%;
     width: 100%;
     background-color: var(--azul-escuro);
-    transition: opacity 0.2s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 .search-bar-form{
     height: 50%;
@@ -140,6 +130,18 @@ article {
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+
+/*-----===MAIN===-----*/
+article {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 
