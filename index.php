@@ -225,42 +225,43 @@
                     <div class="carrosel-visivel">
                         <div class="carrosel">
     
-                        <?php foreach($destaques as $item):?>
-                            <div class="card">
-                                <div class="categoria">
-    
-                                    <figure class="categoria-container">
-                                        <img decoding="async" src="assets/imagens/produtos/<?=$item->getImagem()?>" alt="Imagem de exemplo">
-                                    </figure>
-    
-                                    <div class="categoria-conteudo">
-                                        <div class="nome-container">
-                                            <h2 class="nome"> <?=$item->getNome()?> </h2>
-                                        </div> 
+                            <?php foreach($destaques as $item):?>
+                                <div class="card">
+                                    <div class="categoria">
+        
+                                        <figure class="categoria-container">
+                                            <img decoding="async" src="assets/imagens/produtos/<?=$item->getImagem()?>" alt="Imagem de exemplo">
+                                        </figure>
+        
+                                        <div class="categoria-conteudo">
+                                            <div class="nome-container">
+                                                <h2 class="nome"> <?=$item->getNome()?> </h2>
+                                            </div> 
 
-                                        <div class="preco">
-                                            <div class="preco-antes">
-                                                <p>De R$ <?=$item->getPreco()?> por:</p>
-                                            </div>
+                                            <div class="preco">
+                                                <div class="preco-antes">
+                                                    <p>De R$ <?=$item->getPreco()?> por:</p>
+                                                </div>
 
-                                            <div class="preço-final">
-                                                <p class="preco-depois">R$<?=number_format(($item->getPreco() * (1 - $item->getPromocao())), 2)?></p>
-                                                <span class="vista">Desconto de <?=($item->getPromocao() * 100)?>%</span>
-                                            </div>
+                                                <div class="preço-final">
+                                                    <p class="preco-depois">R$<?=number_format(($item->getPreco() * (1 - $item->getPromocao())), 2)?></p>
+                                                    <span class="vista">Desconto de <?=($item->getPromocao() * 100)?>%</span>
+                                                </div>
 
-                                            <div class="pix">
-                                                <p>No PIX com 15% de desconto</p>
+                                                <div class="pix">
+                                                    <p>No PIX com 15% de desconto</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-    
-                                    <div class="compras-button">
-                                        <button type="submit" class="comprar-button">COMPRAR</button>
-                                        <figure class="categoria-buttons">
-                                            <a href="">
-                                                <img src="assets/icones/1413908.png" alt="">
-                                            </a>
-                                        </figure>
+        
+                                        <div class="compras-button">
+                                            <button type="submit" class="comprar-button">COMPRAR</button>
+                                            <figure class="categoria-buttons">
+                                                <a href="">
+                                                    <img src="assets/icones/1413908.png" alt="">
+                                                </a>
+                                            </figure>
+                                        </div>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
@@ -392,51 +393,6 @@
                                 <img class="cartao-card" src="assets/imagens/santander.png" alt="Maestro">
                             </a>
                         </figure>
-                    </div>
-
-                <div class="caixa-pagamento">
-
-                    <div class="pagamento-titulo">PAGAMENTO</div>
-    
-                    <div class="pagamento-divisa"></div>
-    
-                    <div class="cartao-container">
-                        <figure class="cartao-card-container">
-                            <a href="">
-                                <img class="cartao-card" src="assets/imagens/dinners.png" alt="Diners">
-                            </a>
-                        </figure>
-    
-                        <figure class="cartao-card-container">
-                            <a href="">
-                                <img class="cartao-card" src="assets/imagens/maestro.png" alt="Express">
-                            </a>
-                        </figure>
-    
-                        <figure class="cartao-card-container">
-                            <a href="">
-                                <img class="cartao-card" src="assets/imagens/pngwing.com.png" alt="Maestro">
-                            </a>
-                        </figure>
-    
-                        <figure class="cartao-card-container">
-                            <a href="">
-                                <img class="cartao-card" src="assets/imagens/Mastercard.png" alt="Maestro">
-                            </a>
-                        </figure>
-    
-                        <figure class="cartao-card-container">
-                            <a href="">
-                                <img class="cartao-card" src="assets/imagens/visa.png" alt="Maestro">
-                            </a>
-                        </figure>
-    
-                        <figure class="cartao-card-container">
-                            <a href="">
-                                <img class="cartao-card" src="assets/imagens/santander.png" alt="Maestro">
-                            </a>
-                        </figure>
-    
                     </div>
                 </div>
 
