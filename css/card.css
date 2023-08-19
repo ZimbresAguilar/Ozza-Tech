@@ -8,12 +8,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     z-index: 500;
 }
 /*--=CABEÇALHO CONTAINER=--*/
 .carrosel-cabecalho {
-    height: 15%;
+    height: 10%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;

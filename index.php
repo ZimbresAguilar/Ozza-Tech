@@ -232,71 +232,82 @@
             </div>
 
             <div class="footer-top-duplo">
-                <div class="pagamento-titulo">PAGAMENTO</div>
 
-                <div class="pagamento-divisa"></div>
-
-                <div class="cartao-container">
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/dinners.png" alt="Diners">
-                        </a>
-                    </figure>
-
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/maestro.png" alt="Express">
-                        </a>
-                    </figure>
-
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/pngwing.com.png" alt="Maestro">
-                        </a>
-                    </figure>
-
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/Mastercard.png" alt="Maestro">
-                        </a>
-                    </figure>
-
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/visa.png" alt="Maestro">
-                        </a>
-                    </figure>
-
-                    <figure class="cartao-card-container">
-                        <a href="">
-                            <img class="cartao-card" src="assets/imagens/santander.png" alt="Maestro">
-                        </a>
-                    </figure>
+                <div class="footer-duplo-pagamento">
+                    <div class="pagamento-titulo">PAGAMENTO</div>
+    
+                    <div class="pagamento-divisa"></div>
+    
+                    <div class="cartao-container">
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/dinners.png" alt="Diners">
+                            </a>
+                        </figure>
+    
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/maestro.png" alt="Express">
+                            </a>
+                        </figure>
+    
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/pngwing.com.png" alt="Maestro">
+                            </a>
+                        </figure>
+    
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/Mastercard.png" alt="Maestro">
+                            </a>
+                        </figure>
+    
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/visa.png" alt="Maestro">
+                            </a>
+                        </figure>
+    
+                        <figure class="cartao-card-container">
+                            <a href="">
+                                <img class="cartao-card" src="assets/imagens/santander.png" alt="Maestro">
+                            </a>
+                        </figure>
+                    </div>
 
                 </div>
 
-                <div class="caixa-newsletter">
-
+                <div class="footer-duplo-newsletter">
                     <div class="newsletter-titulo">NEWSLETTER</div>
 
                     <div class="newsletter-divisa"></div>
 
                     <div class="cadastro-email">
                         <div class="email">
-                            <div class="email-titulo">Receba ofertas exclusivas no seu e-mail</div>
-                            <div class="email-text-bottom">
-                                <form action="" method="post" class="search-bar-form-bottom">
-                                    <fieldset class="search-bar">
-                                        <input type="text" name="search-bar-content" class="search-bar-content"
-                                            id="search-bar-content" placeholder="E-mail">
-                                        <input type="submit" value="" name="search-bar-submit"
-                                            class="barra-pesquisa-bottom" id="barra-pesquisa-bottom">
-                                    </fieldset>
-                                </form>
+                            <div class="email-titulo">
+                                <h2>Receba ofertas exclusivas no seu e-mail</h2>
                             </div>
+
+                            <form action="" method="post" id="form-cadastro-email" class="form-cadastro-email">
+
+                                <fieldset class="fieldset-email">
+                                    <input type="text" name="input-cadastro-email" class="input-cadastro-email" id="input-cadastro-email" placeholder="E-mail">
+
+                                    <!--
+                                    <input type="submit" value="" name="input-cadastro-email-btn" class="input-cadastro-email-btn" id="input-cadastro-email-btn">
+                                    -->
+                                    
+                                    <button type="submit" name="input-cadastro-email-btn" class="input-cadastro-email-btn" id="input-cadastro-email-btn">
+                                        <img src="../assets/imagens/seta.png" alt="">
+                                    </button>
+                                </fieldset>
+
+                            </form>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
