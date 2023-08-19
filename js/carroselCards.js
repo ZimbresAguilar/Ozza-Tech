@@ -12,7 +12,7 @@ function moveToNextItem() {
     
     if (currentIndex < maxVisibleIndex) {
         currentIndex++;
-        carrosel.style.transform = `translateX(-${(currentIndex * card) * 1.08}px)`;
+        carrosel.style.transform = `translateX(-${currentIndex * card}px)`;
     }
     checkLastItem();
 }
@@ -22,7 +22,7 @@ function moveToPrevItem() {
     
     if (currentIndex > 0) {
         currentIndex--;
-        carrosel.style.transform = `translateX(-${(currentIndex * card) * 1.08}px)`;
+        carrosel.style.transform = `translateX(-${currentIndex * card}px)`;
     }
     checkLastItem();
 }
