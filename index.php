@@ -97,41 +97,64 @@
                     <h2>Lançamento</h2>
                 </div>
 
-                <div class="carrosel-btn">
-                    <button type="button" class="prvItem"> < </button>
-                    <button type="button" class="nxtItem"> > </button>           
-                </div>
-
-                <div class="carrosel-visivel">
-                    <div class="carrosel">
-
+                <div class="carrossel-conteudo">
+                    <div class="carrosel-btn">
+                        <button type="button" class="prvItem">
+                            < </button>
+                                <button type="button" class="nxtItem"> > </button>
+                    </div>
+    
+                    <div class="carrosel-visivel">
+                        <div class="carrosel">
+    
                         <?php foreach($itens as $item):?>
                             <div class="card">
-                                <div class="categoria">  
-
-                                    <figure class="img-container">
-                                        <img decoding="async" src="assets/imagens/produtos/<?= $item->getImagem() ?>" alt="Imagem de exemplo">
+                                <div class="categoria">
+    
+                                    <figure class="categoria-container">
+                                        <img decoding="async" src="assets/imagens/produtos/<?=$item->getImagem()?>" alt="Imagem de exemplo">
                                     </figure>
-
+    
                                     <div class="categoria-conteudo">
-                                        <span class="nome">
-                                            <h2><?= $item->getNome() ?></h2>
-                                        </span>
-                                        <span class="preço">
-                                            <!--Number format, formata o número (float) para quantas casas forem informadas no parâmetro-->
-                                            <p>de R$ <?= $item->getPrecoFormatado() ?> por:</p>
-                                        </span>
-                                        <button>Saiba mais</button>
-                                    </div>
+                                        <div class="nome-container">
+                                            <h2 class="nome"> <?=$item->getNome()?> </h2>
+                                        </div> 
 
+                                        <div class="preco">
+                                            <div class="preco-antes">
+                                                <p>De R$ <?=($item->getPreco() + 100.00)?> por:</p>
+                                            </div>
+
+                                            <div class="preço-final">
+                                                <span class="vista">À vista:</span>
+                                                <p class="preco-depois">R$<?=$item->getPrecoFormatado()?></p>
+                                            </div>
+
+                                            <div class="pix">
+                                                <p>No PIX com 15% de desconto</p>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="compras-button">
+                                        <button type="submit" class="comprar-button">COMPRAR</button>
+                                        <figure class="categoria-buttons">
+                                            <a href="">
+                                                <img src="assets/icones/1413908.png" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
                                 </div>
                             </div>
                         <?php endforeach; ?>
-
+                        </div>
                     </div>
                 </div>
+
+
             </section>
         </article>
+
     </main>
 
     <footer>
@@ -252,23 +275,25 @@
 
                 </div>
 
+                <div class="caixa-newsletter">
 
-                <div class="newsletter-titulo">NEWSLETTER</div>
+                    <div class="newsletter-titulo">NEWSLETTER</div>
 
-                <div class="newsletter-divisa"></div>
+                    <div class="newsletter-divisa"></div>
 
-                <div class="cadastro-email">
-                    <div class="email">
-                        <div class="email-titulo">Receba ofertas exclusivas no seu e-mail</div>
-                        <div class="email-text-bottom">
-                            <form action="" method="post" class="search-bar-form-bottom">
-                                <fieldset class="search-bar">
-                                    <input type="text" name="search-bar-content" class="search-bar-content"
-                                        id="search-bar-content" placeholder="E-mail">
-                                    <input type="submit" value="" name="search-bar-submit" class="barra-pesquisa-bottom"
-                                        id="barra-pesquisa-bottom">
-                                </fieldset>
-                            </form>
+                    <div class="cadastro-email">
+                        <div class="email">
+                            <div class="email-titulo">Receba ofertas exclusivas no seu e-mail</div>
+                            <div class="email-text-bottom">
+                                <form action="" method="post" class="search-bar-form-bottom">
+                                    <fieldset class="search-bar">
+                                        <input type="text" name="search-bar-content" class="search-bar-content"
+                                            id="search-bar-content" placeholder="E-mail">
+                                        <input type="submit" value="" name="search-bar-submit"
+                                            class="barra-pesquisa-bottom" id="barra-pesquisa-bottom">
+                                    </fieldset>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -77,6 +77,9 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* Temporariamente (usar Krita) */
+    filter: invert();
 }
 .site-theme-btn-container a, .shopping-kart-btn-container a, .user-account-btn-container a{
     height: 100%;
