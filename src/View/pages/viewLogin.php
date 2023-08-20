@@ -11,12 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <!--Own-->
-    <link rel="stylesheet" href="../css/universal.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="/css/universal.css">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
-<?php include "universal/header.php"?>
+    <?php include "../universal/header.php"?>
 
     <main>
         <article>
@@ -33,10 +33,10 @@
                     <h1>Fazer Login</h1>
                 </div>
 
-                <form action="" class="form-login">
+                <form action="/src/Controller/loginController.php" method="POST" class="form-login">
                     <fieldset class="email-login">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
+                        <label for="email-login">Email</label>
+                        <input type="email" name="email-login" id="email-login">
                     </fieldset>
 
                     <fieldset class="senha-login">
@@ -62,9 +62,9 @@
         </article>
     </main>
 
-    <?php include "universal/footer.php"?>
+    <?php include "../universal/footer.php"?>
 </body>
 
-<script src="../js/headerScroll.js"></script>
+<script src="/js/headerScroll.js"></script>
 
 </html>

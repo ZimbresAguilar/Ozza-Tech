@@ -1,11 +1,12 @@
 <?php
+    session_start();
     //-----===Referenciando arquivos===-----
     // Conexão com o banco de dados
-    require "src/DBConnectionLocal.php";
+    require "src/Model/DBConnectionLocal.php";
     // Classe produtos
     require "src/Model/produto.php";
     // Classe produtos do banco de dados
-    require "src/Controller/produtoQuerys.php";
+    require "src/Model/produtoQuerys.php";
 
     // Pega $pdo (cariavel de conexão com BD) pelo DBConnections e manda para produtoQuerys
     $produtoQuerys = new produtoQuerys($pdo);
@@ -33,23 +34,23 @@
 </head>
 
 <body>
-    <?php include "pages/universal/header.php"?>
+    <?php include "src/View/universal/header.php"?>
 
     <main>
         <article>
-            <?php include "pages/index/carossel-lancamentos.php"?>
+            <?php include "src/View/index/carossel-lancamentos.php"?>
 
-            <?php include "pages/index/carrossel-promocoes.php"?>
+            <?php include "src/View/index/carrossel-promocoes.php"?>
 
-            <?php include "pages/index/carrossel-destaques.php"?>
+            <?php include "src/View/index/carrossel-destaques.php"?>
         </article>
 
     </main>
 
-    <?php include "pages/universal/footer.php"?>
+    <?php include "src/View/universal/footer.php"?>
 </body>
 
-<script src="js/headerScroll.js"></script>
-<script src="js/carroselCards.js"></script>
+<script src="/js/headerScroll.js"></script>
+<script src="/js/carroselCards.js"></script>
 
 </html>

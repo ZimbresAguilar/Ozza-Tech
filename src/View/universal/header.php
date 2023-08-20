@@ -36,9 +36,17 @@
                 </figure>
 
                 <figure class="user-account-btn-container">
-                    <a href="/pages/login.php">
-                        <img src="/assets/icones/202-2024792_user-profile-icon-png-download-fa-user-circle.png" alt="">
-                    </a>
+
+                    <?php if(!isset($_SESSION['id'])){?>
+                            <a href="/src/View/pages/viewLogin.php">
+                                <img src="/assets/icones/202-2024792_user-profile-icon-png-download-fa-user-circle.png" alt="">
+                            </a>
+                    <?php }else{?>
+                        <a href="/src/View/pages/viewConta.php">
+                            <img src="/assets/icones/202-2024792_user-profile-icon-png-download-fa-user-circle.png" alt="">
+                        </a>
+                    <?php } ?>
+
                 </figure>
             </div>
         </div>
