@@ -74,14 +74,13 @@
     height: 95%;
     z-index: 999;
     width: calc(100% - 75px);
-    overflow: hidden;
 }
 .carrosel{
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
-    transition: transform 0.3s cubic-bezier(0.65, 0.45, 0.45, 0.65);
+    transition: transform 0.3s ease-in-out;
     justify-content: start;
 }
 /*--==CARD==--*/
@@ -96,6 +95,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all .1s ease-in-out;
 
     overflow: hidden;
 }
@@ -113,13 +113,42 @@
     width: 100%;
     height: 40%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     overflow: hidden;
     background-color: white;
+    position: relative;
 }
-.categoria-container img{
+.imagem-produto{
+    position: absolute;
     height: 100%;
+    z-index: 998;
+}
+.fav-share{
+    transform: translateY(-100px);
+    position: absolute;
+    height: 30%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    transition: all .1s ease-in-out;
+}
+.fav-container, .share-container{
+    height: 60%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+.fav-container{justify-content: end;}
+.share-container{justify-content: start;}
+
+.hollow-heart, .filled-heart, .filled-share{
+    height: 80%;
+}
+.filled-heart{
+    display: none;
 }
 
 .categoria-conteudo{
@@ -132,7 +161,7 @@
 }
 
 .nome-container{
-    height: 30%;
+    height: 35%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -233,39 +262,84 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .comprar-button {
     height: 100%;
     min-width: 110px;
     width: 50%;
+    position: relative;
     border: none;
     border-radius: .5em;
     cursor: pointer;
-    background: var(--azul-claro);
+    background: var(--aqua-claro);
+    overflow: hidden;
+}
+.comprar-button h2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    font-size: 14px;
     font-family: 'Krona One', sans-serif;
-    color: var(--aqua-claro);
+    color: var(--azul-escuro);
+    z-index: 999;
+}
+.comprar-button-hover-color{
+    position: absolute;
+    top: 0;
+    z-index: 998;
+    height: 100%;
+    width: 100%;
+    background-color: var(--aqua-medio);
+    pointer-events: none;
+    transform: translateX(-150px);
+    transition: all .25s ease-in-out;
 }
 
-.categoria-buttons{
+
+.categoria-button{
     height: 100%;
     min-width: 50px;
     width: 25%;
-    background-color: var(--aqua-escuro);
-    border-radius: .3em;
+    border: solid var(--aqua-medio) .25em;
+    border-radius: .5em;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 }
-.categoria-buttons a{
+.categoria-button a{
     height: 100%;
     width: 30%;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.categoria-buttons a img{
+.categoria-button a img{
     /* Temporariamente (usar Krita) */
     filter: invert();
     
-    height: 80%;
+    height: 75%;
+}
+
+/*-----===EFFECTS===-----*/
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px var(--aqua-medio);
+}
+.card:hover .fav-share{
+    transform: translateY(0px);
+}
+
+
+.comprar-button:hover .comprar-button-hover-color{
+    transform: translateX(0);
+}
+
+.categoria-button:hover{
+    background-color: var(--aqua-medio);
 }
