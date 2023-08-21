@@ -9,7 +9,7 @@ insert into produtos(nome, preco, promocao, marca, cor, condicao, origem, locali
 insert into produtos(nome, preco, promocao, marca, cor, condicao, origem, localizacao, quantidade, imagem) values ("Teclado Gamer Z", 377.99, 0.15, "Positivo", "Branco", "Redirecionado", false, "RJ", 2700, "teclado-branco.webp");
 
 insert into produtos(nome, preco, promocao, marca, cor, condicao, origem, localizacao, quantidade, imagem) values ("Monitor Gamer X", 1855.99, 0.40, "Logitech", "Preto", "Novo", false, "SP", 3000, "monitor-logitech.jpg");
-insert into produtos(nome, preco, promocao, marca, cor, condicao, origem, localizacao, quantidade, imagem) values ("monitor Gamer Y", 1235.99, 0.00, "Lenovo", "Cinza", "Usado", true, "MG", 1500, "monitor-lenovo.webp");
+insert into produtos(nome, preco, promocao, marca, cor, condicao, origem, localizacao, quantidade, imagem) values ("Monitor Gamer Y", 1235.99, 0.00, "Lenovo", "Cinza", "Usado", true, "MG", 1500, "monitor-lenovo.webp");
 insert into produtos(nome, preco, promocao, marca, cor, condicao, origem, localizacao, quantidade, imagem) values ("Monitor Gamer Z", 1677.99, 0.10, "Positivo", "Branco", "Redirecionado", false, "RJ", 2700, "monitor-positivo.webp");
 
 insert into produtos(nome, preco, promocao, marca, cor, condicao, origem, localizacao, quantidade, imagem) values ("Gabinete Gamer X", 455.99, 0.00, "Logitech", "Preto", "Novo", false, "SP", 3000, "gabinete-logitech.webp");

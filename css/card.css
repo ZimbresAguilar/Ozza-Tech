@@ -29,9 +29,10 @@ article {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-top: solid 1px var(--aqua-medio);
 }
 .carrosel-cabecalho h2{
-    font-size: 28px;
+    font-size: 32px;
     color: var(--aqua-claro);
 }
 
@@ -63,14 +64,15 @@ article {
 }
 .prvItem,
 .nxtItem {
-    height: 4em;
-    width: 4em;
-    border: none;
+    height: 3em;
+    width: 3em;
+    border: solid 2px var(--aqua-medio);
     border-radius: 5em;
-    color: dodgerblue;
-    font-size: 18px;
+    color: var(--aqua-medio);
+    font-family: 'Krona One', sans-serif;
+    font-size: 22px;
     font-weight: bolder;
-    background-color: rgba(39, 38, 58, 0.526);
+    background-color: var(--azul-medio);
     cursor: pointer;
     z-index: 1000;
 }
@@ -122,7 +124,7 @@ article {
 
 .categoria-container{
     width: 100%;
-    height: 40%;
+    height: 45%;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -163,12 +165,12 @@ article {
 }
 
 .categoria-conteudo{
-    height: 48%;
+    height: 43%;
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
 }
 
 .nome-container{
@@ -183,12 +185,13 @@ article {
     height: 100%;
     width: 100%;
     font-family: 'Krona One', sans-serif;
-	font-size: 24px;
+	font-size: 18px;
     color: var(--aqua-claro);
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    white-space: nowrap;
+    overflow: hidden;
+    line-height: 190%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Número máximo de linhas a serem exibidas */
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -204,7 +207,7 @@ article {
     align-items: self-start;
 }
 .preco-depois{
-	font-size: 24px;
+	font-size: 22px;
     color: var(--aqua-medio);
 }
 
@@ -226,7 +229,7 @@ article {
 }
 .preco-antes p{
     width: 100%;
-    font-size: 14px;
+    font-size: 12px;
     color: var(--aqua-escuro);
 }
 
@@ -241,7 +244,7 @@ article {
     width: 100%;
     height: 30%;
     font-family: 'Krona One', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.5;
     color: var(--aqua-medio);
 }
@@ -262,7 +265,7 @@ article {
     justify-content: start;
 }
 .pix p{
-    font-size: 14px;
+    font-size: 12px;
     color: var(--aqua-claro);
 }
 
@@ -306,7 +309,7 @@ article {
     width: 100%;
     background-color: var(--aqua-medio);
     pointer-events: none;
-    transform: translateX(-150px);
+    transform: translateX(-170px);
     transition: all .25s ease-in-out;
 }
 

@@ -1,3 +1,33 @@
+/*-----===AVISOS===-----*/
+.avisos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.campo-vazio, .login-incorreto{
+  height: 100px;
+  width: 450px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: .75em;
+  background-color: var(--aqua-claro);
+  z-index: 1000;
+}
+.campo-vazio h2, .login-incorreto h2{
+  height: 90%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 22px;
+}
+
+/*-----===MAIN===-----*/
 main{
   height: 60%;
   width: 100%;

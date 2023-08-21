@@ -1,5 +1,6 @@
 <!--PHP para validação de login-->
 <?php
+    // Por algum motivo o conexao.php não tá sendo chamado
     include("../Model/conexao.php");
 
     //Verificar se existe o email e senha na hora do login
@@ -38,14 +39,13 @@
                 //Sessão é uma variável que se mantém válida mesmo que o usuário troque de página
                 $_SESSION['id'] = $usuario['idClientes'];
                 $_SESSION['nome'] = $usuario['nome'];
-                $_SESSION['sobrenome'] = $usuarios['sobrenome'];
+                $_SESSION['sobrenome'] = $usuario['sobrenome'];
 
                 //Depois de logar, redirecionar o usuário para a página da conta
                 header("Location: ../View/pages/viewConta.php");
             }
             else{
-                //header("Location: ../View/pages/viewLogin.php");
-                echo "Falha ao logar! E-mail ou senha incorretos";
+                header("Location: ../View/pages/viewLogin.php");
             }
         }
     }

@@ -9,7 +9,7 @@
     $mysqli = new mysqli($host, $usuario, $senha, $dbname);
 
     // Verificar se foi realizada a conexão (se não retorna erro)
-    if($mysqli->error){
-        die("Falha ao conectar ao banco de dados: ".$mysqli->error);
+    if($mysqli->connect_error){
+        die("Falha ao conectar ao banco de dados: ".$mysqli->connect_error);
     }
 ?>

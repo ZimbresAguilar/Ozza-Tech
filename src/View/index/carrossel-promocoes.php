@@ -34,7 +34,7 @@
     
                                     <div class="categoria-conteudo">
                                         <div class="nome-container">
-                                            <h2 class="nome"> <?=$item->getNome()?> </h2>
+                                            <h2 class="nome"> <?=$item->getNome()." ".$item->getCondicao()." ".$item->getCor()." ".$item->getMarca()?> </h2>
                                         </div> 
 
                                         <div class="preco">

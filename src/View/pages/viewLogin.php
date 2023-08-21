@@ -18,6 +18,15 @@
 <body>
     <?php include "../universal/header.php"?>
 
+    <div class="avisos">
+        <div class="campo-vazio">
+            <h2>PREENCHA OS CAMPOS OBRIGATÓRIOS</h2>
+        </div>
+        <div class="login-incorreto">
+            <h2>E-MAIL OU SENHA INCORRETOS</h2>
+        </div>
+    </div>
+
     <main>
         <article>
             <section class="cadastro-container">

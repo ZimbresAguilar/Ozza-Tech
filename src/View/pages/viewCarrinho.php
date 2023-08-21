@@ -1,5 +1,8 @@
 <?php
+    // Proteger página de acessos indevidos
     include("../../Controller/protectController.php");
+    // Controller do carrinho
+    include("../../Controller/carrinhoController.php");
 ?>
 
 <!DOCTYPE html>
@@ -16,32 +19,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <!--Own-->
     <link rel="stylesheet" href="/css/universal.css">
-    <link rel="stylesheet" href="/css/conta.css">
+    <link rel="stylesheet" href="/css/carrinho.css">
 </head>
 
 <body>
     <?php include "../universal/header.php"?>
 
     <main>
-        <article>
-            <section class="abas-listagem">
-                <ul class="abas">
-                    <li class="dados-pessoais active">Dados Pessoais</li>
-                    <li class="seguranca">Segurança</li>
-                    <li class="conta">Conta</li>
-                </ul>
-            </section>
+        <article class="carrinho">
+            <div class="carrinho-cabecalho">
+                <h1>Carrinho de <?php echo $_SESSION['nome']; ?></h1>
+            </div>
 
-            <section class="aba-exibicao">
-                <div class="exibicao-dados-pessoais active">
-                    <h1>Bem vindo de volta <?php echo $_SESSION['nome']; ?></h1>
-                    <h1><a href="/src/Controller/logoutController.php">Sign Out</a></h1>
-                </div>
+            <div class="carrinho-conteudo-container">
+                <?php include "../carrinho/listagem.php" ?>
+            </div>
 
-                <div class="exibicao-seguranca"></div>
-
-                <div class="exibicao-conta"></div>
-            </section>
+            <div class="carrinho-resumo">
+                <h2>Valor Total:</h2>
+                <h2>R$ <?php include "../carrinho/resumo.php" ?></h2>
+            </div>
         </article>
     </main>
 
