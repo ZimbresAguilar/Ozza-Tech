@@ -87,3 +87,7 @@ article{
   text-decoration: underline;
   cursor: pointer;
 }
+
+#submit-login, #submit-cadastro{
+  cursor: pointer;
+}

@@ -43,6 +43,8 @@
     <?php include "../universal/footer.php"?>
 </body>
 
+<script src="/js/headerScroll.js"></script>
 <script src="/js/loginCadastro.js"></script>
+<script src="/js/cadastroFormat.js"></script>
 
 </html>
