@@ -4,12 +4,14 @@ create table produtos(
 	idProdutos int not null auto_increment,
     nome varchar(250) not null,
     preco decimal(15,2) not null,
+    promocao decimal(15,2) not null,
     marca varchar(200) not null,
     cor varchar(50) not null,
     condicao varchar(100) not null,
     origem boolean not null,
     localizacao varchar(50) not null,
     quantidade int not null,
+    imagem varchar(150) not null,
     primary key(idProdutos)
 );
 

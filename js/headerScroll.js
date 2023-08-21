@@ -1,7 +1,12 @@
+// -----===VARIÁVEIS===----- //
 const headerBottom = document.querySelector('.header-bottom');
+// Posição inicial do scroll
 let lastScrollPosition = window.scrollY;
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", headerPosition);
+
+// -----===FUNÇÕES===----- //
+function headerPosition(){
   const currentScrollPosition = window.scrollY;
 
   if (currentScrollPosition > lastScrollPosition) {
@@ -13,4 +18,4 @@ window.addEventListener('scroll', () => {
   }
 
   lastScrollPosition = currentScrollPosition;
-});
+}
