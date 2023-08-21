@@ -1,6 +1,6 @@
 <?php
     // Por algum motivo o conexao.php não tá sendo chamado
-    require_once("../Model/conexao.php");
+    include("../Model/conexao.php");
 
     if($_SERVER["REQUEST_METHOD"] == "DELETE" && isset($_GET["id"])){
         //Pra previnir SQLInjection, limpa o campo (usando uma função do mysqli)
@@ -24,8 +24,10 @@
         if(!isset($_SESSION)){
             session_start();
         }
+
         session_destroy();
-        require("../View/pages/viewLoginCadastro.php");
+
+        header("Location: ../View/pages/viewLoginCadastro.php");
     }
     else{
         echo "Erro: ID do item não fornecido ou método inválido.";

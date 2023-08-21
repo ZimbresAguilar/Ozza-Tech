@@ -1,8 +1,12 @@
 <!--PHP para validação de cadastro-->
 <?php
     // Por algum motivo chamar o conexao.php não tá funcionando
-    require_once("../Model/conexao.php");
-    
+    try {
+        require_once("../Model/conexao.php");
+    }catch (Exception $e){
+        $error = $e->getMessage();
+        echo $error;
+    }
 
     //Verificar se existe o email e senha na hora do cadastro
     if(isset($_POST['nome-cadastro']) || isset($_POST['sobrenome-cadastro']) || isset($_POST['cpf-cadastro']) || isset($_POST['rg-cadastro']) || isset($_POST['email-cadastro']) || isset($_POST['senha-cadastro']) || isset($_POST['pessoa-cadastro'])){
@@ -76,4 +80,6 @@
             }
         }
     }
+
+    die();
 ?>
