@@ -1,4 +1,4 @@
-<?php foreach ($pedidos as $item) : ?>
+<?php foreach ($pedidos as $item):?>
     <section class="carrinho-conteudo">
         <div class="pedido">
             <div class="pedido-nome">

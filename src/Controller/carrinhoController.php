@@ -64,6 +64,7 @@
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: ".$mysqli->error);
 
     if($sql_query->num_rows == 0){
+        $pedidos = null;
     }
     else{
         while ($pedido = $sql_query->fetch_assoc()){

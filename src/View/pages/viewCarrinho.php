@@ -31,14 +31,8 @@
                     <h1>Carrinho de <?php echo $_SESSION['nome'];?></h1>
                 </div>
 
-                <div class="carrinho-conteudo-container">
-                    <?php include "../carrinho/listagem.php" ?>
-                </div>
+                <?php include("../carrinho/carrinho.php")?>
 
-                <div class="carrinho-resumo">
-                    <h2>Valor Total:</h2>
-                    <h2>R$ <?php include "../carrinho/resumo.php" ?></h2>
-                </div>
             </article>
         <?php } else { ?>
             <h1>Faça <a href="/src/View/pages/viewLoginCadastro.php">Login</a> para ter acesso ao carrinho</h1>
