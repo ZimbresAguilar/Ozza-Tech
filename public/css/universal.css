@@ -73,6 +73,9 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* Temporariamente (usar Krita) */
+    filter: invert();
 }
 .site-theme-btn-container a, .shopping-kart-btn-container a, .user-account-btn-container a{
     height: 100%;
@@ -93,6 +96,11 @@ nav{
 .header-bottom{
     height: 60%;
     width: 100%;
+<<<<<<< HEAD:css/universal.css
+=======
+    background-color: var(--azul-escuro);
+    transition: all 0.25s ease-in-out;
+>>>>>>> 126ed04d4cd507cd27a4bf3002c1358c1646ffd3:public/css/universal.css
 }
 .search-bar-form{
     height: 50%;
@@ -121,6 +129,18 @@ nav{
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+
+/*-----===MAIN===-----*/
+article {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 /*-----===FOOTER===-----*/
@@ -207,11 +227,128 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     border-radius: .5em;
     background-color: var(--azul-medio);
 }
 
+<<<<<<< HEAD:css/universal.css
+=======
+.footer-duplo-pagamento{height: 43%;}
+.footer-duplo-newsletter{height: 53%;}
+.footer-duplo-pagamento, .footer-duplo-newsletter{width: 95%;}
+
+.pagamento-titulo, .newsletter-titulo {
+    height: 35px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: var(--aqua-claro);
+    font-size: 14px;
+}
+.pagamento-divisa, .newsletter-divisa{
+    height: 3px;
+    width: 90%;
+    background-image: linear-gradient(90deg, var(--azul-claro) 25%, var(--azul-medio) 25%);
+}
+
+/*-Pagamento-*/
+.cartao-container {
+    height: calc(100% - 35px);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: .5em;
+    background-color: var(--azul-medio);
+}
+.cartao-card-container {
+    height: 40%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartao-card-container a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartao-card{
+    height: 100%;
+}
+
+/*-Newsletter-*/
+.cadastro-email{
+    height: 50%;
+    width: 100%;
+}
+.email {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+}
+.email-titulo{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.email-titulo h2{
+    font-size: 13px;
+    color: var(--cinza-claro);
+}
+.form-cadastro-email{
+    height: 55%;
+    width: 100%;
+}
+.fieldset-email{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.input-cadastro-email{
+    height: 100%;
+    width: 85%;
+    padding: 0 15px;
+    font-family: 'Krona One', sans-serif;
+    font-size: 13px;
+    color: var(--cinza-escuro);
+    outline: none;
+    border: none;
+}
+.input-cadastro-email-btn{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul-claro);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.input-cadastro-email-btn img{
+    height: 80%;
+    width: 60%;
+}
+
+
+>>>>>>> 126ed04d4cd507cd27a4bf3002c1358c1646ffd3:public/css/universal.css
 /*---=Footer Bottom=---*/
 .footer-bottom{
     height: 30px;
@@ -222,4 +359,8 @@ footer{
     color: var(--aqua-claro);
     font-size: 8px;
     background-color: var(--aqua-escuro);
+<<<<<<< HEAD:css/universal.css
 }
+=======
+}
+>>>>>>> 126ed04d4cd507cd27a4bf3002c1358c1646ffd3:public/css/universal.css
