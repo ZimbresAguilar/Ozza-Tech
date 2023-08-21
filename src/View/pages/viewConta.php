@@ -23,6 +23,8 @@
     <?php include "../universal/header.php"?>
 
     <main>
+        <?php include("../conta/modalExclusao.php");?>
+
         <article>
             <section class="abas-listagem">
                 <ul class="abas">
@@ -44,6 +46,7 @@
 
                 <div class="exibicao-conta">
                     <h1>Conta</h1>
+                    <?php include("../conta/abaConta.php");?>
                 </div>
             </section>
         </article>
@@ -54,5 +57,6 @@
 
 <script src="/js/headerScroll.js"></script>
 <script src="/js/Conta.js"></script>
+<script src="/js/exclusaoConta.js"></script>
 
 </html>
