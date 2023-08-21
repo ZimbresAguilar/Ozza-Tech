@@ -67,7 +67,7 @@ main{
 
 .pedido-nome{
     height: 100%;
-    width: 35%;
+    width: 40%;
 }
 .pedido-nome a{
     height: 100%;
@@ -81,7 +81,7 @@ main{
 
 .pedido-quantidade{
     height: 100%;
-    width: 7.5%;
+    width: 8.5%;
     border-left: solid 1px var(--aqua-claro);
 }
 .pedido-quantidade h1{
@@ -96,7 +96,7 @@ main{
 
 .pedido-preco-individual{
     height: 100%;
-    width: 20%;
+    width: 16.5%;
     border-left: solid 1px var(--aqua-claro);
 }
 .pedido-preco-individual h1{

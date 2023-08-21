@@ -30,21 +30,15 @@
             </figure>
 
             <figure class="shopping-kart-btn-container">
-                <?php if(!isset($_SESSION['id'])){?>
-                    <a href="">
-                        <img src="/assets/icones/1413908.png" alt="carrinho de compras">
-                    </a>
-                <?php }else{?>
-                    <a href="/src/View/pages/viewCarrinho.php">
-                        <img src="/assets/icones/1413908.png" alt="carrinho de compras">
-                    </a>
-                <?php } ?>
+                <a href="/src/View/pages/viewCarrinho.php">
+                    <img src="/assets/icones/1413908.png" alt="carrinho de compras">
+                </a>
             </figure>
 
             <figure class="user-account-btn-container">
 
                 <?php if(!isset($_SESSION['id'])){?>
-                        <a href="/src/View/pages/viewLogin.php">
+                        <a href="/src/View/pages/viewLoginCadastro.php">
                             <img src="/assets/icones/202-2024792_user-profile-icon-png-download-fa-user-circle.png" alt="">
                         </a>
                 <?php }else{?>

@@ -38,9 +38,13 @@
                     <h1><a href="/src/Controller/logoutController.php">Sign Out</a></h1>
                 </div>
 
-                <div class="exibicao-seguranca"></div>
+                <div class="exibicao-seguranca">
+                    <h1>Segurança</h1>
+                </div>
 
-                <div class="exibicao-conta"></div>
+                <div class="exibicao-conta">
+                    <h1>Conta</h1>
+                </div>
             </section>
         </article>
     </main>
@@ -49,5 +53,6 @@
 </body>
 
 <script src="/js/headerScroll.js"></script>
+<script src="/js/Conta.js"></script>
 
 </html>

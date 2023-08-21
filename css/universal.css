@@ -29,7 +29,7 @@ header{
     align-items: center;
     justify-content: center;
     position: sticky;
-    z-index: 999;
+    z-index: 1002;
 }
 
 /*---=Header Top=---*/

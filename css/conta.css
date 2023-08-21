@@ -13,6 +13,8 @@ article{
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: .75em;
+    overflow: hidden;
     background-color: var(--azul-escuro);
 }
 
@@ -32,6 +34,7 @@ article{
     align-items: end;
     justify-content: start;
     list-style: none;
+    overflow: hidden;
 }
 .dados-pessoais, .seguranca, .conta{
     height: 33.33%;
@@ -39,16 +42,22 @@ article{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     color: var(--aqua-escuro);
+    cursor: pointer;
+    transition: all .25s ease-in-out;
 }
 .dados-pessoais.active, .seguranca.active, .conta.active{
-    color: var(--aqua-claro);
+    color: var(--aqua-medio);
     background-color: var(--azul-claro);
+    box-shadow: 0 0 20px 5px var(--aqua-medio);
 }
+
 
 .aba-exibicao{
     height: 100%;
     width: 80%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,11 +66,15 @@ article{
 .exibicao-dados-pessoais, .exibicao-seguranca, .exibicao-conta{
     width: 100%;
     height: 100%;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .25s ease-in-out;
+    z-index: 998;
 }
-.exibicao-dados-pessoais.active{
+.exibicao-dados-pessoais.active, .exibicao-seguranca.active, .exibicao-conta.active{
     color: var(--aqua-claro);
     background-color: var(--azul-claro);
+    z-index: 999;
 }

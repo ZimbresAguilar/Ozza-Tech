@@ -29,19 +29,19 @@
 
 /*-----===MAIN===-----*/
 main{
-  height: 60%;
+  min-height: 550px;
+  height: 50%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
 }
 
 article{
-  min-height: 600px;
+  min-height: 550px;
   height: 60%;
-  min-width: 450px;
-  width: 50%;
+  width: 450px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,14 +50,16 @@ article{
 
 /*---=Cadastro Container=--*/
 .cadastro-container{
-  height: 500px;
+  height: 450px;
   width: 450px;
   position: absolute;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   transform: translateX(-450px);
+  transition: all .25s ease-in-out;
 
   background-color: var(--azul-escuro);
 }
@@ -74,27 +76,14 @@ article{
   justify-content: center;
 
   transform: translateX(0px);
+  transition: all .25s ease-in-out;
 
   background-color: var(--azul-escuro);
 }
 .login-container.hidden{transform: translateX(450px);}
 
-.side-login{
-  height: 100%;
-  width: 55%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.container-imagem-login{
-  height: 100%;
-  width: 45%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.imagem-login{
-  height: 100%;
+/*-TROCAR-*/
+.pra-login, .pra-cadastro{
+  text-decoration: underline;
+  cursor: pointer;
 }

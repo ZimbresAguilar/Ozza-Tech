@@ -8,6 +8,6 @@
 
     //Se não tiver nenhuma sessão de id adquirido pelo login vai encerrar
     if(!isset($_SESSION['id'])){
-        die("Você não pode acessar esta página.\nFaça <a href=\"/src/View/pages/viewLogin.php\">Login!</a>");
+        die("Você não pode acessar esta página.\nFaça <a href=\"/src/View/pages/viewLoginCadastro.php\">Login!</a>");
     }
 ?>

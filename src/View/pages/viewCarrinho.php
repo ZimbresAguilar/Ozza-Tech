@@ -1,6 +1,4 @@
 <?php
-    // Proteger página de acessos indevidos
-    include("../../Controller/protectController.php");
     // Controller do carrinho
     include("../../Controller/carrinhoController.php");
 ?>
@@ -26,23 +24,30 @@
     <?php include "../universal/header.php"?>
 
     <main>
-        <article class="carrinho">
-            <div class="carrinho-cabecalho">
-                <h1>Carrinho de <?php echo $_SESSION['nome']; ?></h1>
-            </div>
 
-            <div class="carrinho-conteudo-container">
-                <?php include "../carrinho/listagem.php" ?>
-            </div>
+        <?php if(isset($_SESSION['id'])) { ?>
+            <article class="carrinho">
+                <div class="carrinho-cabecalho">
+                    <h1>Carrinho de <?php echo $_SESSION['nome'];?></h1>
+                </div>
 
-            <div class="carrinho-resumo">
-                <h2>Valor Total:</h2>
-                <h2>R$ <?php include "../carrinho/resumo.php" ?></h2>
-            </div>
-        </article>
+                <div class="carrinho-conteudo-container">
+                    <?php include "../carrinho/listagem.php" ?>
+                </div>
+
+                <div class="carrinho-resumo">
+                    <h2>Valor Total:</h2>
+                    <h2>R$ <?php include "../carrinho/resumo.php" ?></h2>
+                </div>
+            </article>
+        <?php } else { ?>
+            <h1>Faça <a href="/src/View/pages/viewLoginCadastro.php">Login</a> para ter acesso ao carrinho</h1>
+        <?php } ?>
+
     </main>
 
-    <?php include "../universal/footer.php"?>
+    <?php include "../universal/footer.php" ?>
+
 </body>
 
 <script src="/js/headerScroll.js"></script>

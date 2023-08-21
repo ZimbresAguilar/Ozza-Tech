@@ -1,4 +1,4 @@
-<!--PHP para validação de login-->
+<!--PHP para validação de cadastro-->
 <?php
     // Por algum motivo o conexao.php não tá sendo chamado
     include("../Model/conexao.php");

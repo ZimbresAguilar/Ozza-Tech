@@ -7,5 +7,5 @@
     // Se estiver conectado, vem pra cá, e então destrói as variáveis, encerrando assim a sessão
     session_destroy();
     //Redireciona o usuário
-    header("location: ../View/pages/viewLogin.php");
+    header("location: ../View/pages/viewLoginCadastro.php");
 ?>

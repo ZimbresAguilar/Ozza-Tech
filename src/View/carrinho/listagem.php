@@ -18,7 +18,7 @@
             </div>
 
             <div class="pedido-excluir">
-                <button type="submit" class="btn-excluir">
+                <button type="submit" class="btn-excluir" id=<?= $item['idPedido']?>>
                     <h2>EXCLUIR</h2>
                     <div class="excluir-btn-hover-color"></div>
                 </button>
