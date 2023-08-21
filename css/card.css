@@ -3,7 +3,7 @@
     position: relative;
     min-height: 35em;
     height: 50vh;
-    width: 95%;
+    width: 97.5%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -81,7 +81,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s cubic-bezier(0.85, 0.4, 0.4, 0.85);
     justify-content: start;
 }
 /*--==CARD==--*/
@@ -116,7 +116,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: var(--cinza-claro);
+    background-color: white;
 }
 .categoria-container img{
     height: 100%;
