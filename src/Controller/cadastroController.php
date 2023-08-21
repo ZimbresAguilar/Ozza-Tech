@@ -1,19 +1,8 @@
 <!--PHP para validação de cadastro-->
 <?php
     // Por algum motivo chamar o conexao.php não tá funcionando
-    // include("../Model/conexao.php");
-    $host = "localhost";
-    $usuario = "root";
-    $senha = "";
-    $dbname = "ozzatech";
-
-    // Criando uma nova conexão ao criar um objeto mysqli
-    $mysqli = new mysqli($host, $usuario, $senha, $dbname);
-
-    // Verificar se foi realizada a conexão (se não retorna erro)
-    if($mysqli->connect_error){
-        die("Falha ao conectar ao banco de dados: ".$mysqli->connect_error);
-    }
+    require_once("../Model/conexao.php");
+    
 
     //Verificar se existe o email e senha na hora do cadastro
     if(isset($_POST['nome-cadastro']) || isset($_POST['sobrenome-cadastro']) || isset($_POST['cpf-cadastro']) || isset($_POST['rg-cadastro']) || isset($_POST['email-cadastro']) || isset($_POST['senha-cadastro']) || isset($_POST['pessoa-cadastro'])){

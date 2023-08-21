@@ -1,13 +1,6 @@
 <?php
     // Por algum motivo chamar o conexao.php não tá funcionando
-    // include("../Model/conexao.php");
-    $host = "localhost";
-    $usuario = "root";
-    $senha = "";
-    $dbname = "ozzatech";
-
-    // Criando uma nova conexão ao criar um objeto mysqli
-    $mysqli = new mysqli($host, $usuario, $senha, $dbname);
+    require_once("../Model/conexao.php");
 
     // Verificar se foi realizada a conexão (se não retorna erro)
     if($mysqli->connect_error){
