@@ -1,7 +1,7 @@
 <!--PHP para validação de login-->
 <?php
     // Por algum motivo o conexao.php não tá sendo chamado
-    include("../Model/conexao.php");
+    require_once("../Model/conexao.php");
 
     //Verificar se existe o email e senha na hora do login
     if(isset($_POST['email-login']) || isset($_POST['senha-login'])){
