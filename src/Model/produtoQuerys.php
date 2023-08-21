@@ -1,12 +1,16 @@
 <?php
     // Vai ter acesso ao banco de dados
-    class produtoRepositorio{
+    class produtoQuerys{
 
         private PDO $pdo;
 
         // Recebe variável de conexão com BD
         public function __construct(PDO $pdo){
             $this->pdo = $pdo;
+        }
+
+        private function formarObjeto($item){
+            return new Produto($item['idProdutos'], $item['nome'], $item['preco'], $item['promocao'], $item['marca'], $item['cor'], $item['condicao'], $item['origem'], $item['localizacao'], $item['quantidade'], $item['imagem']);
         }
 
         public function chamarLancamentos(): array{
@@ -20,7 +24,7 @@
             // -----===Transformando cada índice da query em um OBJETO da Classe Produtos===-----
             // array_map() -> Ensinar o que fazer para cada um dos elementos do array mencionado
             $dadosItens = array_map(function ($item){
-                return new Produto($item['idProdutos'], $item['nome'], $item['preco'], $item['promocao'], $item['marca'], $item['cor'], $item['condicao'], $item['origem'], $item['localizacao'], $item['quantidade'], $item['imagem']);
+                return $this->formarObjeto($item);
             }, $itens);
             // Agora é um array de objetos, não um array de array
 
@@ -38,7 +42,7 @@
             // -----===Transformando cada índice da query em um OBJETO da Classe Produtos===-----
             // array_map() -> Ensinar o que fazer para cada um dos elementos do array mencionado
             $dadosItens = array_map(function ($item){
-                return new Produto($item['idProdutos'], $item['nome'], $item['preco'], $item['promocao'], $item['marca'], $item['cor'], $item['condicao'], $item['origem'], $item['localizacao'], $item['quantidade'], $item['imagem']);
+                return $this->formarObjeto($item);
             }, $itens);
             // Agora é um array de objetos, não um array de array
 
@@ -53,7 +57,7 @@
             $itens = $statement->fetchAll(PDO::FETCH_ASSOC);
 
             $dadosItens = array_map(function ($item){
-                return new Produto($item['idProdutos'], $item['nome'], $item['preco'], $item['promocao'], $item['marca'], $item['cor'], $item['condicao'], $item['origem'], $item['localizacao'], $item['quantidade'], $item['imagem']);
+                return $this->formarObjeto($item);
             }, $itens);
 
             return $dadosItens;

@@ -1,3 +1,14 @@
+/*-----===MAIN===-----*/
+article {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 /*--=CONTAINER=--*/
 .container-lancamentos, .container-promocoes, .container-destaques{
     position: relative;
@@ -18,9 +29,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-top: solid 1px var(--aqua-medio);
 }
 .carrosel-cabecalho h2{
-    font-size: 28px;
+    font-size: 32px;
     color: var(--aqua-claro);
 }
 
@@ -52,14 +64,15 @@
 }
 .prvItem,
 .nxtItem {
-    height: 4em;
-    width: 4em;
-    border: none;
+    height: 3em;
+    width: 3em;
+    border: solid 2px var(--aqua-medio);
     border-radius: 5em;
-    color: dodgerblue;
-    font-size: 18px;
+    color: var(--aqua-medio);
+    font-family: 'Krona One', sans-serif;
+    font-size: 22px;
     font-weight: bolder;
-    background-color: rgba(39, 38, 58, 0.526);
+    background-color: var(--azul-medio);
     cursor: pointer;
     z-index: 1000;
 }
@@ -74,14 +87,13 @@
     height: 95%;
     z-index: 999;
     width: calc(100% - 75px);
-    overflow: hidden;
 }
 .carrosel{
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
-    transition: transform 0.3s cubic-bezier(0.85, 0.4, 0.4, 0.85);
+    transition: transform 0.3s ease-in-out;
     justify-content: start;
 }
 /*--==CARD==--*/
@@ -96,6 +108,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all .1s ease-in-out;
 
     overflow: hidden;
 }
@@ -111,28 +124,57 @@
 
 .categoria-container{
     width: 100%;
-    height: 40%;
+    height: 45%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     overflow: hidden;
     background-color: white;
+    position: relative;
 }
-.categoria-container img{
+.imagem-produto{
+    position: absolute;
     height: 100%;
+    z-index: 998;
+}
+.fav-share{
+    transform: translateY(-100px);
+    position: absolute;
+    height: 30%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    transition: all .1s ease-in-out;
+}
+.fav-container, .share-container{
+    height: 60%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+.fav-container{justify-content: end;}
+.share-container{justify-content: start;}
+
+.hollow-heart, .filled-heart, .filled-share{
+    height: 80%;
+}
+.filled-heart{
+    display: none;
 }
 
 .categoria-conteudo{
-    height: 48%;
+    height: 43%;
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
 }
 
 .nome-container{
-    height: 30%;
+    height: 35%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -143,12 +185,13 @@
     height: 100%;
     width: 100%;
     font-family: 'Krona One', sans-serif;
-	font-size: 24px;
+	font-size: 18px;
     color: var(--aqua-claro);
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    white-space: nowrap;
+    overflow: hidden;
+    line-height: 190%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Número máximo de linhas a serem exibidas */
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -164,7 +207,7 @@
     align-items: self-start;
 }
 .preco-depois{
-	font-size: 24px;
+	font-size: 22px;
     color: var(--aqua-medio);
 }
 
@@ -186,7 +229,7 @@
 }
 .preco-antes p{
     width: 100%;
-    font-size: 14px;
+    font-size: 12px;
     color: var(--aqua-escuro);
 }
 
@@ -201,7 +244,7 @@
     width: 100%;
     height: 30%;
     font-family: 'Krona One', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.5;
     color: var(--aqua-medio);
 }
@@ -222,7 +265,7 @@
     justify-content: start;
 }
 .pix p{
-    font-size: 14px;
+    font-size: 12px;
     color: var(--aqua-claro);
 }
 
@@ -233,39 +276,84 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .comprar-button {
     height: 100%;
     min-width: 110px;
     width: 50%;
+    position: relative;
     border: none;
     border-radius: .5em;
     cursor: pointer;
-    background: var(--azul-claro);
+    background: var(--aqua-claro);
+    overflow: hidden;
+}
+.comprar-button h2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    font-size: 14px;
     font-family: 'Krona One', sans-serif;
-    color: var(--aqua-claro);
+    color: var(--azul-escuro);
+    z-index: 999;
+}
+.comprar-button-hover-color{
+    position: absolute;
+    top: 0;
+    z-index: 998;
+    height: 100%;
+    width: 100%;
+    background-color: var(--aqua-medio);
+    pointer-events: none;
+    transform: translateX(-170px);
+    transition: all .25s ease-in-out;
 }
 
-.categoria-buttons{
+
+.categoria-button{
     height: 100%;
     min-width: 50px;
     width: 25%;
-    background-color: var(--aqua-escuro);
-    border-radius: .3em;
+    border: solid var(--aqua-medio) .25em;
+    border-radius: .5em;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 }
-.categoria-buttons a{
+.categoria-button a{
     height: 100%;
     width: 30%;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.categoria-buttons a img{
+.categoria-button a img{
     /* Temporariamente (usar Krita) */
     filter: invert();
     
-    height: 80%;
+    height: 75%;
+}
+
+/*-----===EFFECTS===-----*/
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px var(--aqua-medio);
+}
+.card:hover .fav-share{
+    transform: translateY(0px);
+}
+
+
+.comprar-button:hover .comprar-button-hover-color{
+    transform: translateX(0);
+}
+
+.categoria-button:hover{
+    background-color: var(--aqua-medio);
 }

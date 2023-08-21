@@ -1,6 +1,6 @@
 <?php
     $user = "root";
-    $password = "MySql_2005_password";
+    $password = "";
 
     $pdo = new PDO('mysql:host=localhost;dbname=ozzatech', $user, $password);
 ?>

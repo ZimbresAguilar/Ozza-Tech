@@ -5,13 +5,13 @@
 /*-----===VARIABLES===-----*/
 :root{
     --cinza-claro: #d6d6d6;
-    --cinza-escuro: #0f0f0f;
-    --azul-escuro: #11151c;
-    --azul-medio: #171a21;
-    --azul-claro: #364156;
-    --aqua-escuro: #3d7068;
+    --cinza-escuro: #151515;
+    --azul-escuro: #0e1421;
+    --azul-medio: #1b2233;
+    --azul-claro: #2a3e62;
+    --aqua-escuro: #2f5e57;
     --aqua-medio: #33d9c5;
-    --aqua-claro: #b9f4f3;
+    --aqua-claro: #9eeceb;
 
     background-color: var(--cinza-escuro);
 
@@ -29,7 +29,7 @@ header{
     align-items: center;
     justify-content: center;
     position: sticky;
-    z-index: 999;
+    z-index: 1002;
 }
 
 /*---=Header Top=---*/
@@ -106,7 +106,7 @@ nav{
 .search-bar-form{
     height: 50%;
     width: 55%;
-    border-radius: 2em;
+    border-radius: .5em;
     overflow: hidden;
 }
 .search-bar{
@@ -130,18 +130,6 @@ nav{
     outline: none;
     border: none;
     cursor: pointer;
-}
-
-
-/*-----===MAIN===-----*/
-article {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 /*-----===FOOTER===-----*/
