@@ -7,35 +7,49 @@
 
     // Por algum motivo chamar o conexao.php não tá funcionando
     try {
-        require_once("../Model/conexao.php");
+        require_once("../../Model/conexao.php");
     }catch (Exception $e){
         $error = $e->getMessage();
         echo $error;
     }
+    $host = "localhost";
+    $usuario = "root";
+    $senha = "";
+    $dbname = "ozzatech";
+
+    try{
+        // Criando uma nova conexão ao criar um objeto mysqli
+        $mysqli = new mysqli($host, $usuario, $senha, $dbname);
+    }
+    catch(Exception $e){
+        $error = $e->getMessage();
+        echo $error;
+    }
+
 
     //Verificar se existe o email e senha na hora do cadastro
     if(isset($_POST['nome-cadastro']) || isset($_POST['sobrenome-cadastro']) || isset($_POST['cpf-cadastro']) || isset($_POST['rg-cadastro']) || isset($_POST['email-cadastro']) || isset($_POST['senha-cadastro']) || isset($_POST['pessoa-cadastro'])){
         //Verificar se o email foi preenchido ou não
         if(strlen($_POST['nome-cadastro']) == 0){
-            header("Location: ../View/pages/viewLoginCadastro.php");
+            header("Location: ../..//View/pages/viewLoginCadastro.php");
         }
         else if(strlen($_POST['sobrenome-cadastro']) == 0){
-            header("Location: ../View/pages/viewLoginCadastro.php");
+            header("Location: ../../View/pages/viewLoginCadastro.php");
         }
         else if(strlen($_POST['cpf-cadastro']) < 14){
-            header("Location: ../View/pages/viewLoginCadastro.php");
+            header("Location: ../../View/pages/viewLoginCadastro.php");
         }
         else if(strlen($_POST['rg-cadastro']) < 12){
-            header("Location: ../View/pages/viewLoginCadastro.php");
+            header("Location: ../../View/pages/viewLoginCadastro.php");
         }
         else if(strlen($_POST['email-cadastro']) == 0){
-            header("Location: ../View/pages/viewLoginCadastro.php");
+            header("Location: ../../View/pages/viewLoginCadastro.php");
         }
         else if(strlen($_POST['senha-cadastro']) == 0){
-            header("Location: ../View/pages/viewLoginCadastro.php");
+            header("Location: ../../View/pages/viewLoginCadastro.php");
         }
         else if(strlen($_POST['pessoa-cadastro']) == 0){
-            header("Location: ../View/pages/viewLoginCadastro.php");
+            header("Location: ../../View/pages/viewLoginCadastro.php");
         }
         else{
             //Pra previnir SQLInjection, limpa o campo (usando uma função do mysqli)
@@ -81,10 +95,10 @@
                 $_SESSION['rg'] = $usuario['rg'];
     
                 //Depois de logar, redirecionar o usuário para a página da conta
-                header("Location: ../View/pages/viewConta.php");
+                header("Location: ../../View/pages/viewConta.php");
             }
             else{
-                header("Location: ../View/pages/viewLoginCadastro.php");
+                header("Location: ../../View/pages/viewLoginCadastro.php");
             }
         }
     }

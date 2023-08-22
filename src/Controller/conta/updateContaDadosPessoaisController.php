@@ -26,7 +26,7 @@
                 break;
             case "cpf":
                 $sql_code_update = "UPDATE `ozzatech`.`clientes` SET cpf = '$novoValor' WHERE idClientes = $idCliente";
-                $_SESSION['ncpf'] = $novoValor;
+                $_SESSION['cpf'] = $novoValor;
                 break;
             case "rg":
                 $sql_code_update = "UPDATE `ozzatech`.`clientes` SET rg = '$novoValor' WHERE idClientes = $idCliente";
