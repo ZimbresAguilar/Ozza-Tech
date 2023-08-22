@@ -74,6 +74,7 @@ article{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 0.9em;
 
   transform: translateX(0px);
   transition: all .25s ease-in-out;
@@ -90,4 +91,33 @@ article{
 
 #submit-login, #submit-cadastro{
   cursor: pointer;
+}
+
+/*--==card login==--*/
+.cabeca{
+  width: 90%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cabecalho {
+
+  color:var(--aqua-claro);
+}
+
+.form-loggin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--aqua-claro);
+}
+.email-login{
+  position: relative;
 }

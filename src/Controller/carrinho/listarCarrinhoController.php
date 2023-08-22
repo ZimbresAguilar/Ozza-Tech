@@ -12,7 +12,7 @@
     //require_once("../Model/conexao.php");não está funcionando
     $host = "localhost";
     $usuario = "root";
-    $senha = "";
+    $senha = "MySql_2005_password";
     $dbname = "ozzatech";
     try{
         // Criando uma nova conexão ao criar um objeto mysqli

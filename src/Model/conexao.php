@@ -2,7 +2,7 @@
     // define() -> constante
     $host = "localhost";
     $usuario = "root";
-    $senha = "";
+    $senha = "MySql_2005_password";
     $dbname = "ozzatech";
 
     try{
