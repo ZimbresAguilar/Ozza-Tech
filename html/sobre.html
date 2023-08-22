@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sobre</title>
     <link rel="stylesheet" href="../css/sobre.css">
     <!--LINKS-->
     <!--Google Fonts-->
@@ -22,7 +22,7 @@
             <nav>
                 <ul class="nav-content">
                     <li class="nav-item">
-                        <a href="index.html">HOME</a>
+                        <a href="../index.html">HOME</a>
                     </li>
 
                     <li class="nav-item">
@@ -71,11 +71,16 @@
             </form>
         </div>
     </header><!--fim do header da navbar-->
+    <div class="container-imagem">
 
-    <main><img
-            src="https://res.cloudinary.com/corsair-pwa/image/upload/v1680719491/akamai/TLC/Global/gaming-pcs-banner_ICUE-CERTIFIED.webp"
-            alt="">
-            <!-- div onde a historia está colocada-->
+    </div>
+    <main>
+            <div class="imagem">
+                <img src="https://res.cloudinary.com/corsair-pwa/image/upload/v1680719491/akamai/TLC/Global/gaming-pcs-banner_ICUE-CERTIFIED.webp"
+                    alt="">
+            </div>
+
+        </div>
         <div class="historia">
             <div class="container"><!--container onde está o texto-->
                 <h3>A História da Loja Ozza Tech:</h3>
@@ -85,8 +90,10 @@
                     havia uma loja peculiar chamada Ozza Tech. Fundada por um visionário chamado Oliver Ozza, a loja se
                     destacava por oferecer tecnologia avançada e soluções inovadoras em um lugar onde a tradição e o
                     modernismo
-                    se entrelaçavam <span id="pontos">...</span><!--span com o id:"pontos", que é necessario para o javascript, esse em especifico está com metade do texto, pois ele vai aparecer primeiro-->
-                    <span id="mais"><!--segundo span com o resto da historia, ela vai aparecer depois que o botão for apertado.-->
+                    se entrelaçavam <span
+                        id="pontos">...</span><!--span com o id:"pontos", que é necessario para o javascript, esse em especifico está com metade do texto, pois ele vai aparecer primeiro-->
+                    <span
+                        id="mais"><!--segundo span com o resto da historia, ela vai aparecer depois que o botão for apertado.-->
                         Oliver Ozza era um homem que sempre acreditou que a tecnologia poderia unir pessoas e melhorar
                         suas
                         vidas.
@@ -162,14 +169,18 @@
         </div>
     </main>
     </div>
-    <button onclick="leiaMais()" id="btnLeiaMais" class="scroll-down-button">Leia Mais</button><!--local do botão "leiaMais" com id-->
+    <div class="botao">
+        <button onclick="leiaMais()" id="btnLeiaMais" class="scroll-down-button">Leia
+            Mais</button>
+    </div>
+    <!--local do botão "leiaMais" com id-->
     <script type="text/javascript" src="../js/headerScroll.js"></script><!--link do script-->
-    <div class="seta">
-        <div class="img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmrvEeZSxoxkhuUJP3IDoHIjEvSmdwJCU9vg&usqp=CAU" class="clikable-image"
-                alt="imagem clicavel" onclick="scrollToTop()">
-                <button class="scroll-top-button" onclick="scrollToTop()"></button>
-                <h6>clique aqui para voltar ao inicio</h6>
+    <div class="cima">
+        <div class="seta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmrvEeZSxoxkhuUJP3IDoHIjEvSmdwJCU9vg&usqp=CAU"
+                class="clikable-image" alt="imagem clicavel" onclick="scrollToTop()">
+            <button class="scroll-top-button" onclick="scrollToTop()"></button>
+
         </div>
     </div><!--divs da imagem da seta para cima-->
 </body>
