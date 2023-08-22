@@ -152,6 +152,7 @@ nav {
 
 h3 {
     color: white;
+    text-align:justify;
 }
 
 p {
@@ -169,6 +170,7 @@ p {
 .container {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /*---=aqui é para deixar o texto centralizado=---*/
@@ -190,11 +192,18 @@ p {
 }
 
 /*---=aqui é para deixar a imagem da seta no canto da tela=---*/
-main .imagem{
+.imagem{
     display: flex;
     justify-content: center;
-    width: 41.3%;
-    height: 768;
+    width: 100%;
+    height: 100%;
+}
+.img {
+    width: 100%;
+    height: 100%;
+}
+.imgBanner {
+    width: 100%;
 }
 
 div .seta {
