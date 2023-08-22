@@ -12,11 +12,11 @@
         $error = $e->getMessage();
         echo $error;
     }
-    $host = "localhost";
-    $usuario = "root";
-    $senha = "";
+    
+    $host = "mysql.ozzatech.kinghost.net";
+    $usuario = "ozzatech";
+    $senha = "MySql2005password";
     $dbname = "ozzatech";
-
     try{
         // Criando uma nova conexão ao criar um objeto mysqli
         $mysqli = new mysqli($host, $usuario, $senha, $dbname);
