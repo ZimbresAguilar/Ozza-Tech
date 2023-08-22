@@ -1,8 +1,8 @@
 <?php
     // define() -> constante
-    $host = "localhost";
-    $usuario = "root";
-    $senha = "";
+    $host = "mysql.ozzatech.kinghost.net";
+    $usuario = "ozzatech";
+    $senha = "MySql2005password";
     $dbname = "ozzatech";
 
     try{
