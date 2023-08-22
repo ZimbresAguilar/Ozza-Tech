@@ -22,7 +22,7 @@ create table clientes(
     cpf varchar(15) not null,
     rg varchar(15) not null,
     email varchar(200) not null,
-    senha varchar(200) not null,
+    senha varchar(255) not null,
     pessoa boolean not null,
     primary key(idClientes)
 );

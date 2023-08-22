@@ -18,8 +18,15 @@ excluirConta.addEventListener("click", function(){
     // Agora, vamos enviar uma solicitação para um arquivo PHP usando o método "fetch()". Isso é como dizer para o PHP: "Ei, quero excluir o item com o ID que te passei"
     //Precisamos passar o nome do arquivo PHP que vai receber a solicitação e também um pouco de informação, como o ID do item, usando o "?" e "id=". O método "DELETE" indica que estamos pedindo para o PHP excluir algo
 
-    fetch("/src/Controller/contaController.php?id=" + idCliente, {
+    fetch("/src/Controller/conta/deletarContaController.php?id=" + idCliente, {
         method: "DELETE"
+    }).then(response => response.json()).then(data => {
+        if(data.success){
+            window.location.href="/src/View/pages/viewLoginCadastro.php";
+        }
+        else{
+            console.log(data.message);
+        }
     });
 });
 

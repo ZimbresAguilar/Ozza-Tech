@@ -1,6 +1,7 @@
 <?php
+    include("../../Controller/protectController.php");
     // Controller do carrinho
-    include("../../Controller/carrinhoController.php");
+    include("../../Controller/carrinho/carrinhoController.php");
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
 </head>
 
 <body>
-    <?php include "../universal/header.php"?>
+    <?php include("../universal/header.php")?>
 
     <main>
 
@@ -31,8 +32,7 @@
                     <h1>Carrinho de <?php echo $_SESSION['nome'];?></h1>
                 </div>
 
-                <?php include("../carrinho/carrinho.php")?>
-
+                <?php if($pedidos != null) { include("../carrinho/carrinho.php"); }?>
             </article>
         <?php } else { ?>
             <h1>Faça <a href="/src/View/pages/viewLoginCadastro.php">Login</a> para ter acesso ao carrinho</h1>

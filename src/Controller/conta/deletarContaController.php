@@ -1,6 +1,10 @@
 <?php
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
     // Por algum motivo o conexao.php não tá sendo chamado
-    require_once("../Model/conexao.php");
+    include("../Model/conexao.php");
 
     if($_SERVER["REQUEST_METHOD"] == "DELETE" && isset($_GET["id"])){
         //Pra previnir SQLInjection, limpa o campo (usando uma função do mysqli)
@@ -21,11 +25,12 @@
             die("Falha na execução do código SQL: ".$mysqli->error);
         }
 
-        if(!isset($_SESSION)){
-            session_start();
-        }
         session_destroy();
-        require("../View/pages/viewLoginCadastro.php");
+
+        // Após concluir a exclusão devolver resposta pro javascript (feita em json)
+        $response = array("success" => true);
+        echo json_encode($response);
+
     }
     else{
         echo "Erro: ID do item não fornecido ou método inválido.";

@@ -2,7 +2,7 @@
     <h1>Fazer Cadastro</h1>
 </div>
 
-<form action="/src/Controller/cadastroController.php" method="POST" class="form-cadastro">
+<form action="/src/Controller/loginCadastro/cadastrarController.php" method="POST" class="form-cadastro">
     <fieldset class="nome-cadastro">
         <label for="nome-cadastro">Nome</label>
         <input type="text" name="nome-cadastro" id="nome-cadastro">

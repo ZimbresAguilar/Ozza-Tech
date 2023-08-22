@@ -207,6 +207,10 @@ footer{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    transform: all .25s ease-in-out;
+}
+.institucional-item a:hover, .duvidas-item a:hover, .ajuda-item a:hover{
+    color: var(--aqua-medio);
 }
 
 /*-Footer Duplo-*/

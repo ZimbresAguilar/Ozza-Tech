@@ -1,6 +1,6 @@
 /*-----===MAIN===-----*/
 main{
-    height: 30vh;
+    height: 60vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -126,5 +126,17 @@ article{
     border: none;
     border-radius: 5em;
     background-color: var(--azul-claro);
+    cursor: pointer;
+}
+
+.modal-btn-exclusao-conta{
+    height: 35px;
+    width: 120px;
+    border: none;
+    border-radius: .5em;
+    font-family: 'Krona One', sans-serif;
+    font-size: 10px;
+    color: var(--azul-escuro);
+    background-color: var(--aqua-claro);
     cursor: pointer;
 }

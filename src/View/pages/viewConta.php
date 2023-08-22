@@ -36,8 +36,7 @@
 
             <section class="aba-exibicao">
                 <div class="exibicao-dados-pessoais active">
-                    <h1>Bem vindo de volta <?php echo $_SESSION['nome']; ?></h1>
-                    <h1><a href="/src/Controller/logoutController.php">Sign Out</a></h1>
+                    <?php include("../conta/abaDadosPessoais.php"); ?>
                 </div>
 
                 <div class="exibicao-seguranca">
@@ -58,5 +57,6 @@
 <script src="/js/headerScroll.js"></script>
 <script src="/js/Conta.js"></script>
 <script src="/js/exclusaoConta.js"></script>
+<script src="/js/editarDadosPessoais.js"></script>
 
 </html>

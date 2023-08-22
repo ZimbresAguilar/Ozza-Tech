@@ -5,7 +5,7 @@
         <h1>Fazer Login</h1>
     </div>
 
-    <form action="/src/Controller/loginController.php" method="POST" class="form-login">
+    <form action="/src/Controller/loginCadastro/loginController.php" method="POST" class="form-login">
         <fieldset class="email-login">
             <label for="email-login">Email</label>
             <input type="email" name="email-login" id="email-login">
