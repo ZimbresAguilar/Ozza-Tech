@@ -1,19 +1,28 @@
 <?php
-    // Por algum motivo chamar o conexao.php não tá funcionando
-    try {
-        require_once("../Model/conexao.php");
-    }catch (Exception $e){
-        $error = $e->getMessage();
-        echo $error;
+    if(!isset($_SESSION)){
+        session_start();
     }
-
-    session_start();
-
     //Se não existir sessão
+
     if(!isset($_SESSION['id'])){
         require("protectController.php");
         exit();
     }
+
+    //require_once("../Model/conexao.php");não está funcionando
+    $host = "localhost";
+    $usuario = "root";
+    $senha = "MySql_2005_password";
+    $dbname = "ozzatech";
+    try{
+        // Criando uma nova conexão ao criar um objeto mysqli
+        $mysqli = new mysqli($host, $usuario, $senha, $dbname);
+    }
+    catch(Exception $e){
+        $error = $e->getMessage();
+        echo $error;
+    }
+
 
     $id = $mysqli->real_escape_string($_SESSION['id']);
 
@@ -39,5 +48,5 @@
         }
     }
 
-    die();
+    //Não pode chamar die pq senão os valores não são passdos ($pedidos, $_SESSION)
 ?>

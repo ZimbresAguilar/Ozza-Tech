@@ -1,4 +1,8 @@
 <?php
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
     // Por algum motivo o conexao.php não tá sendo chamado
     include("../Model/conexao.php");
 
@@ -21,13 +25,12 @@
             die("Falha na execução do código SQL: ".$mysqli->error);
         }
 
-        if(!isset($_SESSION)){
-            session_start();
-        }
-
         session_destroy();
 
-        header("Location: ../View/pages/viewLoginCadastro.php");
+        // Após concluir a exclusão devolver resposta pro javascript (feita em json)
+        $response = array("success" => true);
+        echo json_encode($response);
+
     }
     else{
         echo "Erro: ID do item não fornecido ou método inválido.";

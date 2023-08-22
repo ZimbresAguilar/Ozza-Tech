@@ -1,7 +1,7 @@
 <?php
     //Arquivo para proteger meus dados (como sessão etc)
     //Pra poder utilizar a $_SESSION, antes você precisa inicializá-la
-    if(!isset($_SESSION)){
+    if(!isset($_SESSION['id'])){
         //"Revivendo" a sessão pra poder utilizar as variáveis dela
         session_start();
     }

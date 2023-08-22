@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="compras-button">
-                        <button type="submit" class="comprar-button">
+                            <button type="submit" class="comprar-button">
                                 <h2>COMPRAR</h2>
                                 <div class="comprar-button-hover-color"></div>
                             </button>
