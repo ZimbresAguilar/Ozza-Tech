@@ -1,5 +1,10 @@
-<!--PHP para validação de login-->
 <?php
+    if(!isset($_SESSION['id'])){
+        //"Revivendo" a sessão pra poder utilizar as variáveis dela
+        session_start();
+    }
+
+    //PHP para validação de login
     try {
         // Por algum motivo o conexao.php não tá sendo chamado
         require_once("../../Model/conexao.php");
@@ -9,11 +14,16 @@
     }
 
     //Verificar se existe o email e senha na hora do login
-    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"]) && isset($_POST["senha"])){
+    if(!isset($_POST['email-login']) || !isset($_POST['senha-login'])){
+        session_start();
+        $_SESSION['campos-vazios'] = true;
+        header("Location: ../../View/pages/viewLoginCadastro.php");
+    }
+    else{
         //Pra previnir SQLInjection, limpa o campo (usando uma função do mysqli)
         //$mysqli está vindo do conexao.php (puxando do include)
-        $email = $mysqli->real_escape_string($_POST['email']);
-        $senha = $mysqli->real_escape_string($_POST['senha']);
+        $email = $mysqli->real_escape_string($_POST['email-login']);
+        $senha = $mysqli->real_escape_string($_POST['senha-login']);
 
         //Verificar query
         $sql_code = "SELECT * FROM clientes WHERE email = \"$email\";";
@@ -37,18 +47,14 @@
             $_SESSION['cpf'] = $usuario['cpf'];
             $_SESSION['rg'] = $usuario['rg'];
 
+            $_SESSION['campos-vazios'] = false;
             // Responder com um JSON indicando sucesso
-            $response = array("success" => true, "message" => "Tudo OK");
-            echo json_encode($response);
-            die();
+            header("Location: ../../View/pages/viewConta.php");
         }
         else{
-            // Responder com um JSON indicando falha
-            $resposta = array("success" => false, "message" => "Email ou Senha incorretos");
-            echo json_encode($resposta);
-            die();
+            $_SESSION['campos-vazios'] = false;
+            header("Location: ../../View/pages/viewLoginCadastro.php");
         }
     }
-
     die();
 ?>
