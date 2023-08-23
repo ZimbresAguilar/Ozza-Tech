@@ -20,29 +20,42 @@ praCadastro.addEventListener("click", () => {
 
 
 /*---=Checar Login=---*/
-loginForm.addEventListener("submit", (event) => {
+loginForm.addEventListener("submit", async function(event) {
     event.preventDefault();
 
     const loginEmail = document.getElementById("email-login").value;
     const loginSenha = document.getElementById("senha-login").value;
 
-    const url = `/src/Controller/loginCadastro/loginController.php?email=${encodeURIComponent(loginEmail)}&senha=${encodeURIComponent(loginSenha)}`;
+    const url = `/src/Controller/loginCadastro/loginController.php`;
 
-    fetch(url, {
-        method: "POST"
-    })
-    .then(response => {response.json(); console.log(response)})
-    .then(data => {
-        if(data.success){
-            setTimeout(function(){
-                window.location.href = "/src/View/pages/viewConta.php";
-            }, 750);
+    const data = {
+        email: loginEmail,
+        senha: loginSenha
+    };
+
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            const responseData = await response.json();
+            
+            if (responseData.success) {
+                setTimeout(function(){
+                    window.location.href = "/src/View/pages/viewConta.php";
+                }, 750);
+            } else {
+                console.log(responseData.message);
+            }
+        } else {
+            console.error("Erro na requisição:", response.status, response.statusText);
         }
-        else{
-            console.log(data.message);
-        }
-    })
-    .catch(error => {
+    } catch (error) {
         console.error("Erro na requisição:", error);
-    });
+    }
 });
