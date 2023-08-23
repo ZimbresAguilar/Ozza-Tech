@@ -33,11 +33,11 @@ btnsEditar.forEach(btn => {
     btn.addEventListener("click", function () {
         const idCliente = this.getAttribute("id");
         const campoMudar = this.getAttribute("dado");
-        const editado = btn.previousElementSibling.value;
+        const editado = btn.previousElementSibling;
 
-        console.log(editado);
+        console.log(editado.value);
         
-        const url = `/src/Controller/conta/updateContaDadosPessoaisController.php?id=${encodeURIComponent(idCliente)}&dado=${encodeURIComponent(campoMudar)}&editado=${encodeURIComponent(editado)}`;
+        const url = `/src/Controller/conta/updateContaDadosPessoaisController.php?id=${encodeURIComponent(idCliente)}&dado=${encodeURIComponent(campoMudar)}&editado=${encodeURIComponent(editado.value)}`;
         
         fetch(url, {
             method: "POST"
@@ -45,9 +45,9 @@ btnsEditar.forEach(btn => {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                window.location.reload(true);
+                window.location.reload();
             } else {
-                window.location.reload(true);
+                editado.value = data.editadoBackup;
                 console.log(data.message);
             }
         });

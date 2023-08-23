@@ -14,6 +14,8 @@
         $campoMudar = $mysqli->real_escape_string($_GET["dado"]);
         $novoValor = $mysqli->real_escape_string($_GET["editado"]);
 
+        $antes = "";
+
         // Verificar o campo e criar a consulta de atualização adequada
         switch ($campoMudar) {
             case "nome":
@@ -38,10 +40,9 @@
                     $_SESSION['cpf'] = $novoValor;
                 }
                 else{
-                    echo "CPF já cadastrado";
-                    header("Location: ../../View/pages/viewConta.php");
-                    // Responder com um JSON indicando sucesso
-                    $response = array("success" => false);
+                    $antes = $_SESSION['cpf'];
+                    // Responder com um JSON indicando falha
+                    $response = array("success" => false, "message" => "Já tem", "editadoBackup" => $antes);
                     echo json_encode($response);
                     die();
                 }
@@ -59,10 +60,9 @@
                     $_SESSION['rg'] = $novoValor;
                 }
                 else{
-                    echo "RG já cadastrado";
-                    header("Location: ../../View/pages/viewConta.php");
-                    // Responder com um JSON indicando sucesso
-                    $response = array("success" => false);
+                    $antes = $_SESSION['rg'];
+                    // Responder com um JSON indicando falha
+                    $response = array("success" => false, "message" => "Já tem", "editadoBackup" => $antes);
                     echo json_encode($response);
                     die();
                 }
@@ -80,7 +80,7 @@
         }
 
         // Responder com um JSON indicando sucesso
-        $response = array("success" => true);
+        $response = array("success" => true, "message" => "Tudo OK");
         echo json_encode($response);
     } else {
         echo "Erro: parâmetros ausentes ou método inválido.";
