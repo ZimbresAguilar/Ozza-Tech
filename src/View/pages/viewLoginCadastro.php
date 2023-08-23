@@ -33,6 +33,10 @@
                 <?php include("../loginCadastro/cadastro.php");?>
             </section>
 
+            <section class="login-cadastro-img-container">
+
+            </section>
+
             <section class="login-container">
                 <?php include("../loginCadastro/login.php");?>
             </section>
@@ -43,8 +47,8 @@
     <?php include "../universal/footer.php"?>
 </body>
 
-<script src="/js/headerScroll.js"></script>
-<script src="/js/loginCadastro.js"></script>
-<script src="/js/cadastroFormat.js"></script>
+<script src="/js/universal/headerScroll.js"></script>
+<script src="/js/loginCadastro/loginCadastro.js"></script>
+<script src="/js/loginCadastro/cadastroFormat.js"></script>
 
 </html>

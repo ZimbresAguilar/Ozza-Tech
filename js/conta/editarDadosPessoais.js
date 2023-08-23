@@ -34,8 +34,6 @@ btnsEditar.forEach(btn => {
         const idCliente = this.getAttribute("id");
         const campoMudar = this.getAttribute("dado");
         const editado = btn.previousElementSibling;
-
-        console.log(editado.value);
         
         const url = `/src/Controller/conta/updateContaDadosPessoaisController.php?id=${encodeURIComponent(idCliente)}&dado=${encodeURIComponent(campoMudar)}&editado=${encodeURIComponent(editado.value)}`;
         

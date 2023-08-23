@@ -1,4 +1,5 @@
 /*-----===VARIÁVEIS===-----*/
+const abaExibicao = document.querySelector(".aba-exibicao");
 /*Botão das abas*/
 const dadosPessoaisBtn = document.querySelector(".dados-pessoais");
 const segurancaBtn = document.querySelector(".seguranca");
@@ -10,6 +11,8 @@ const conta = document.querySelector(".exibicao-conta");
 
 /*-----===Functions===-----*/
 dadosPessoaisBtn.addEventListener("click", () => {
+    abaExibicao.classList.remove("exclusao");
+
     dadosPessoaisBtn.classList.add("active");
     segurancaBtn.classList.remove("active");
     contaBtn.classList.remove("active");
@@ -19,6 +22,8 @@ dadosPessoaisBtn.addEventListener("click", () => {
     conta.classList.remove("active");
 });
 segurancaBtn.addEventListener("click", () => {
+    abaExibicao.classList.remove("exclusao");
+
     dadosPessoaisBtn.classList.remove("active");
     segurancaBtn.classList.add("active");
     contaBtn.classList.remove("active");
@@ -28,6 +33,8 @@ segurancaBtn.addEventListener("click", () => {
     conta.classList.remove("active");
 });
 contaBtn.addEventListener("click", () => {
+    abaExibicao.classList.add("exclusao");
+
     dadosPessoaisBtn.classList.remove("active");
     segurancaBtn.classList.remove("active");
     contaBtn.classList.add("active");

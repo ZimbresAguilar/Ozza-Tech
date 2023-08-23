@@ -50,7 +50,7 @@
     <?php include "src/View/universal/footer.php"?>
 </body>
 
-<script src="/js/headerScroll.js"></script>
-<script src="/js/carroselCards.js"></script>
+<script src="/js/universal/headerScroll.js"></script>
+<script src="/js/index/carroselCards.js"></script>
 
 </html>

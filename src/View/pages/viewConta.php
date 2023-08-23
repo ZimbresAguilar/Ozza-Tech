@@ -30,7 +30,7 @@
                 <ul class="abas">
                     <li class="dados-pessoais active">Dados Pessoais</li>
                     <li class="seguranca">Segurança</li>
-                    <li class="conta">Conta</li>
+                    <li class="conta">Exclusão</li>
                 </ul>
             </section>
 
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="exibicao-conta">
-                    <h1>Conta</h1>
+                    <h1>Exclusão</h1>
                     <?php include("../conta/abaConta.php");?>
                 </div>
             </section>
@@ -54,9 +54,9 @@
     <?php include "../universal/footer.php"?>
 </body>
 
-<script src="/js/headerScroll.js"></script>
-<script src="/js/Conta.js"></script>
-<script src="/js/exclusaoConta.js"></script>
-<script src="/js/editarDadosPessoais.js"></script>
+<script src="/js/universal/headerScroll.js"></script>
+<script src="/js/conta/conta.js"></script>
+<script src="/js/conta/exclusaoConta.js"></script>
+<script src="/js/conta/editarDadosPessoais.js"></script>
 
 </html>
