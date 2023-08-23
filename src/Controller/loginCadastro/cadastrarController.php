@@ -73,7 +73,7 @@
 
             if($quantidade == 0){
                 //Verificar query
-                $sql_code = "INSERT INTO `clientes`(nome, sobrenome, cpf, rg, email, senha, pessoa) VALUES (\"$nome\", \"$sobrenome\", \"$cpf\", \"$rg\", \"$email\", \"$senhaCriptografada\", $pessoa);";
+                $sql_code = "INSERT INTO `cli.entes`(nome, sobrenome, cpf, rg, email, senha, pessoa) VALUES (\"$nome\", \"$sobrenome\", \"$cpf\", \"$rg\", \"$email\", \"$senhaCriptografada\", $pessoa);";
                 // Caso dê erro encerra
                 $sql_query = $mysqli->query($sql_code);
                 if(!$sql_query){

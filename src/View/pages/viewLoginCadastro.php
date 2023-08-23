@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,12 +22,11 @@
     <?php include "../universal/header.php"?>
 
     <div class="avisos">
-        <div class="campo-vazio">
-            <h2>PREENCHA OS CAMPOS OBRIGATÓRIOS</h2>
-        </div>
-        <div class="login-incorreto">
-            <h2>E-MAIL OU SENHA INCORRETOS</h2>
-        </div>
+        <?php if($_SESSION['campos-vazios'] == 1){ ?>
+            <div class="campo-vazio">
+                <h2>PREENCHA OS CAMPOS OBRIGATÓRIOS</h2>
+            </div>
+        <?php }?>
     </div>
 
     <main>
