@@ -5,6 +5,8 @@
         <h1>Fazer Login</h1>
     </div>
 
+    <?php echo json_encode($resposta); ?>
+
     <form action="/src/Controller/loginCadastro/loginController.php" method="POST" class="form-login" id="form-login">
         <fieldset class="email-login">
             <label for="email-login">Email</label>

@@ -31,7 +31,7 @@ loginForm.addEventListener("submit", (event) => {
     fetch(url, {
         method: "POST"
     })
-    .then(resposta => resposta.json())
+    .then(response => {response.json(); console.log(response)})
     .then(data => {
         if(data.success){
             setTimeout(function(){
@@ -41,5 +41,8 @@ loginForm.addEventListener("submit", (event) => {
         else{
             console.log(data.message);
         }
+    })
+    .catch(error => {
+        console.error("Erro na requisição:", error);
     });
 });

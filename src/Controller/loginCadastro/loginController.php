@@ -9,11 +9,11 @@
     }
 
     //Verificar se existe o email e senha na hora do login
-    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET["email"]) && isset($_GET["senha"])){
+    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"]) && isset($_POST["senha"])){
         //Pra previnir SQLInjection, limpa o campo (usando uma função do mysqli)
         //$mysqli está vindo do conexao.php (puxando do include)
-        $email = $mysqli->real_escape_string($_GET['email']);
-        $senha = $mysqli->real_escape_string($_GET['senha']);
+        $email = $mysqli->real_escape_string($_POST['email']);
+        $senha = $mysqli->real_escape_string($_POST['senha']);
 
         //Verificar query
         $sql_code = "SELECT * FROM clientes WHERE email = \"$email\";";
@@ -38,8 +38,8 @@
             $_SESSION['rg'] = $usuario['rg'];
 
             // Responder com um JSON indicando sucesso
-            $resposta = array("success" => true, "message" => "Tudo OK");
-            echo json_encode($resposta);
+            $response = array("success" => true, "message" => "Tudo OK");
+            echo json_encode($response);
             die();
         }
         else{
