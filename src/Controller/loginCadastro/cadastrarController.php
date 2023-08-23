@@ -64,7 +64,7 @@
             $senhaCriptografada = password_hash($senhaCadastro, PASSWORD_DEFAULT);
             $pessoa = $mysqli->real_escape_string($_POST['pessoa-cadastro']);
 
-            //Verificar se a quantidade retornada é 1 (só pode ter 1 registro na mesma conta/senha)
+            //Verificar se a quantidade retornada é 1 (só pode ter 1 registro na mesma conta/senha/email)
             $sql_code_check = "SELECT * FROM `clientes` WHERE cpf = \"$cpf\" OR rg = \"$rg\" OR email = \"$email\";";
             // Caso dê erro encerra
             $sql_query_check = $mysqli->query($sql_code_check) or die("Falha na execução do código SQL: ".$mysqli->error);

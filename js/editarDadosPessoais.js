@@ -45,8 +45,9 @@ btnsEditar.forEach(btn => {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                window.location.reload();
+                window.location.reload(true);
             } else {
+                window.location.reload(true);
                 console.log(data.message);
             }
         });

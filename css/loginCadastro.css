@@ -91,3 +91,15 @@ article{
 #submit-login, #submit-cadastro{
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+.form-login, .form-cadastro{
+  color: white;
+}

@@ -20,18 +20,54 @@
                 $sql_code_update = "UPDATE `ozzatech`.`clientes` SET nome = '$novoValor' WHERE idClientes = $idCliente";
                 $_SESSION['nome'] = $novoValor;
                 break;
+
             case "sobrenome":
                 $sql_code_update = "UPDATE `ozzatech`.`clientes` SET sobrenome = '$novoValor' WHERE idClientes = $idCliente";
                 $_SESSION['sobrenome'] = $novoValor;
                 break;
+
             case "cpf":
-                $sql_code_update = "UPDATE `ozzatech`.`clientes` SET cpf = '$novoValor' WHERE idClientes = $idCliente";
-                $_SESSION['cpf'] = $novoValor;
+                //Verificar se a quantidade retornada é 1 (só pode ter 1 registro na mesma conta/senha/email)
+                $sql_code_check = "SELECT * FROM `clientes` WHERE cpf = \"$novoValor\";";
+                // Caso dê erro encerra
+                $sql_query_check = $mysqli->query($sql_code_check) or die("Falha na execução do código SQL: ".$mysqli->error);
+                //Retorna quantidade de linhas
+                $quantidade = $sql_query_check->num_rows;
+                if($quantidade == 0){
+                    $sql_code_update = "UPDATE `ozzatech`.`clientes` SET cpf = '$novoValor' WHERE idClientes = $idCliente";
+                    $_SESSION['cpf'] = $novoValor;
+                }
+                else{
+                    echo "CPF já cadastrado";
+                    header("Location: ../../View/pages/viewConta.php");
+                    // Responder com um JSON indicando sucesso
+                    $response = array("success" => false);
+                    echo json_encode($response);
+                    die();
+                }
                 break;
+
             case "rg":
-                $sql_code_update = "UPDATE `ozzatech`.`clientes` SET rg = '$novoValor' WHERE idClientes = $idCliente";
-                $_SESSION['rg'] = $novoValor;
+                //Verificar se a quantidade retornada é 1 (só pode ter 1 registro na mesma conta/senha/email)
+                $sql_code_check = "SELECT * FROM `clientes` WHERE rg = \"$novoValor\";";
+                // Caso dê erro encerra
+                $sql_query_check = $mysqli->query($sql_code_check) or die("Falha na execução do código SQL: ".$mysqli->error);
+                //Retorna quantidade de linhas
+                $quantidade = $sql_query_check->num_rows;
+                if($quantidade == 0){
+                    $sql_code_update = "UPDATE `ozzatech`.`clientes` SET rg = '$novoValor' WHERE idClientes = $idCliente";
+                    $_SESSION['rg'] = $novoValor;
+                }
+                else{
+                    echo "RG já cadastrado";
+                    header("Location: ../../View/pages/viewConta.php");
+                    // Responder com um JSON indicando sucesso
+                    $response = array("success" => false);
+                    echo json_encode($response);
+                    die();
+                }
                 break;
+
             default:
                 echo "Erro: campo desconhecido.";
                 exit;
