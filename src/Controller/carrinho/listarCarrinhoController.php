@@ -10,9 +10,15 @@
     }
 
     //require_once("../Model/conexao.php");não está funcionando
+<<<<<<< HEAD
     $host = "localhost";
     $usuario = "root";
     $senha = "MySql_2005_password";
+=======
+    $host = "mysql.ozzatech.kinghost.net";
+    $usuario = "ozzatech";
+    $senha = "MySql2005password";
+>>>>>>> 0270b2db2b0532fd1641dbf8eade90db79b8712e
     $dbname = "ozzatech";
     try{
         // Criando uma nova conexão ao criar um objeto mysqli

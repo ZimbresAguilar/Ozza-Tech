@@ -14,9 +14,8 @@
     }
     $host = "localhost";
     $usuario = "root";
-    $senha = "MySql_2005_password";
+    $senha = "";
     $dbname = "ozzatech";
-
     try{
         // Criando uma nova conexão ao criar um objeto mysqli
         $mysqli = new mysqli($host, $usuario, $senha, $dbname);
