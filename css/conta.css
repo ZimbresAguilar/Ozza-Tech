@@ -36,6 +36,7 @@ article{
     justify-content: start;
     list-style: none;
     overflow: hidden;
+    z-index: 900;
 }
 .dados-pessoais, .seguranca, .conta{
     height: 33.33%;
@@ -46,12 +47,22 @@ article{
     text-align: center;
     color: var(--aqua-escuro);
     cursor: pointer;
-    transition: all .25s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.conta{
+    color: maroon;
 }
 .dados-pessoais.active, .seguranca.active, .conta.active{
+    border: none;
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
     color: var(--aqua-medio);
     background-color: var(--azul-claro);
-    box-shadow: 0 0 20px 5px var(--aqua-medio);
+    box-shadow: 0 0 20px 2px var(--aqua-medio);
+}
+.conta.active{
+    color: red;
+    box-shadow: 0 0 20px 2px red;
 }
 
 /*---=Aba em exibição=---*/
@@ -63,6 +74,11 @@ article{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    box-shadow: 0 0 15px 1px var(--aqua-medio);
+    transition: all .15s ease-in-out;
+}
+.aba-exibicao.exclusao{
+    box-shadow: 0 0 15px 1px crimson;   
 }
 
 .exibicao-dados-pessoais, .exibicao-seguranca, .exibicao-conta{
@@ -92,7 +108,7 @@ article{
     font-family: 'Krona One', sans-serif;
     font-size: 10px;
     color: var(--azul-escuro);
-    background-color: var(--aqua-claro);
+    background-color: crimson;
     cursor: pointer;
 }
 

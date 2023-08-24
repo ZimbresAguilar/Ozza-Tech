@@ -1,3 +1,5 @@
+<h1 style="color: white;"><?php var_dump($_SESSION)?></h1>
+
 <header>
     <div class="header-top">
         <div class="header-top-left"></div>

@@ -29,30 +29,29 @@
 
 /*-----===MAIN===-----*/
 main{
-  min-height: 550px;
-  height: 50%;
+  height: 70vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 article{
-  min-height: 550px;
-  height: 60%;
-  width: 450px;
-  position: relative;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  border-radius: 1em;
   overflow: hidden;
+  background-color: var(--azul-escuro);
 }
 
 /*---=Cadastro Container=--*/
 .cadastro-container{
   height: 450px;
   width: 450px;
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,13 +62,11 @@ article{
 
   background-color: var(--azul-escuro);
 }
-.cadastro-container.active{transform: translateX(0px);}
 
 /*---=Login Container=---*/
 .login-container{
   height: 400px;
   width: 450px;
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +78,6 @@ article{
 
   background-color: var(--azul-escuro);
 }
-.login-container.hidden{transform: translateX(450px);}
 
 /*-TROCAR-*/
 .pra-login, .pra-cadastro{
@@ -93,31 +89,14 @@ article{
   cursor: pointer;
 }
 
-/*--==card login==--*/
-.cabeca{
-  width: 90%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.cabecalho {
 
-  color:var(--aqua-claro);
-}
 
-.form-loggin{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.form-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  color: var(--aqua-claro);
-}
-.email-login{
-  position: relative;
+
+
+
+
+
+
+.form-login, .form-cadastro{
+  color: white;
 }

@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,18 +22,21 @@
     <?php include "../universal/header.php"?>
  
     <div class="avisos">
-        <div class="campo-vazio">
-            <h2>PREENCHA OS CAMPOS OBRIGATÓRIOS</h2>
-        </div>
-        <div class="login-incorreto">
-            <h2>E-MAIL OU SENHA INCORRETOS</h2>
-        </div>
+        <?php if($_SESSION['campos-vazios'] == 1){ ?>
+            <div class="campo-vazio">
+                <h2>PREENCHA OS CAMPOS OBRIGATÓRIOS</h2>
+            </div>
+        <?php }?>
     </div>
 
     <main>
         <article>
             <section class="cadastro-container">
                 <?php include("../loginCadastro/cadastro.php");?>
+            </section>
+
+            <section class="login-cadastro-img-container">
+
             </section>
 
             <section class="login-container">
@@ -43,8 +49,8 @@
     <?php include "../universal/footer.php"?>
 </body>
 
-<script src="/js/headerScroll.js"></script>
-<script src="/js/loginCadastro.js"></script>
-<script src="/js/cadastroFormat.js"></script>
+<script src="/js/universal/headerScroll.js"></script>
+<script src="/js/loginCadastro/loginCadastro.js"></script>
+<script src="/js/loginCadastro/cadastroFormat.js"></script>
 
 </html>

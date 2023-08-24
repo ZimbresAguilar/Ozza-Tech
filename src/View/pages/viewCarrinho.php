@@ -44,6 +44,6 @@
 
 </body>
 
-<script src="/js/headerScroll.js"></script>
+<script src="/js/universal/headerScroll.js"></script>
 
 </html>
