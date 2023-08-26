@@ -5,7 +5,7 @@
 /*-----===VARIABLES===-----*/
 :root{
     --cinza-claro: #d6d6d6;
-    --cinza-escuro: #151515;
+    --cinza-escuro: #111111;
     --azul-escuro: #0e1421;
     --azul-medio: #1b2233;
     --azul-claro: #2a3e62;
@@ -16,6 +16,8 @@
     background-color: var(--cinza-escuro);
 
     font-family: 'Krona One', sans-serif;
+
+    scroll-behavior: smooth;
 }
 
 /*-----===HEADER===-----*/

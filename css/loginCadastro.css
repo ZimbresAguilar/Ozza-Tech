@@ -35,6 +35,7 @@ main{
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  transition: all .5s ease-in-out;
 }
 
 article{
@@ -79,7 +80,7 @@ article{
   transform: translateX(-50%);
   transition: all .5s ease-in-out;
 
-  background-color: var(--azul-escuro);
+  background-color: var(--azul-medio);
 }
 
 /*---=Login Container=---*/
