@@ -1,4 +1,8 @@
 <?php
+    if(!isset($_SESSION['id'])){
+        //"Revivendo" a sessão pra poder utilizar as variáveis dela
+        session_start();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -22,11 +26,6 @@
     <?php include "../universal/header.php"?>
 
     <div class="avisos">
-        <?php if($_SESSION['campos-vazios'] == 1){ ?>
-            <div class="campo-vazio">
-                <h2>PREENCHA OS CAMPOS OBRIGATÓRIOS</h2>
-            </div>
-        <?php }?>
     </div>
 
     <main>

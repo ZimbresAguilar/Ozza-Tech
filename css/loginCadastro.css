@@ -38,47 +38,210 @@ main{
 }
 
 article{
+  height: 90%;
   width: 90%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   border-radius: 1em;
   overflow: hidden;
-  background-color: var(--azul-escuro);
 }
 
 /*---=Cadastro Container=--*/
 .cadastro-container{
-  height: 450px;
-  width: 450px;
+  min-height: 450px;
+  height: 90%;
+  width: 50%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  transform: translateX(-450px);
-  transition: all .25s ease-in-out;
+  transform: translateX(-151%);
+  transition: all .5s ease-in-out;
+
+  background-color: var(--azul-escuro);
+}
+
+/*---=Imagem Container=---*/
+.login-cadastro-img-container{
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(-50%);
+  transition: all .5s ease-in-out;
 
   background-color: var(--azul-escuro);
 }
 
 /*---=Login Container=---*/
 .login-container{
-  height: 400px;
-  width: 450px;
+  min-height: 450px;
+  height: 80%;
+  width: 50%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  transform: translateX(0px);
-  transition: all .25s ease-in-out;
+  transform: translateX(50%);
+  transition: all .5s ease-in-out;
+}
 
-  background-color: var(--azul-escuro);
+/*-Login Cabeçalho-*/
+.cabecalho{
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cabecalho h1{
+  font-size: 24px;
+  color: var(--aqua-medio);
+}
+
+/*-LOGIN FORM-*/
+.form-login{
+  height: 65%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.email-login, .senha-login{
+  height: 30%;
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.email-login-label, .senha-login-label{
+  position: absolute;
+  top: 37.5%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  font-size: 15px;
+  color: var(--aqua-medio);
+  transition: all .5s ease-in-out;
+}
+#email-login, #senha-login{
+  height: 60%;
+  width: calc(95% - 30px);
+  padding: 0 15px;
+  outline: none;
+  background-color: transparent;
+  border: solid 1px var(--aqua-medio);
+  border-radius: .5em;
+  font-family: 'Krona One', sans-serif;
+  font-size: 14px;
+  color: var(--aqua-medio);
+}
+#senha-login{
+  width: calc(85% - 15px);
+  padding: 0 10% 0 15px;
+}
+
+.checkbox-login, .submit-login{
+  height: 20%;
+  width: 90%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+/*-CheckBox-*/
+.checkbox-login{
+  width: 85%;
+  justify-content: start;
+}
+#checkbox-login{
+  height: 20px;
+  width: 20px;
+  border: solid 1px var(--aqua-medio);
+  border-radius: .25em;
+  cursor: pointer;
+}
+.checkbox-login-label{
+  height: 100%;
+  width: 75%;
+  padding: 0 0 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 14px;
+  color: var(--aqua-medio);
+}
+/*-Submit Button-*/
+#submit-login{
+  height: 80%;
+  width: 80%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: .5em;
+  outline: none;
+  background-color: var(--aqua-claro);
+  overflow: hidden;
+}
+#submit-login h1{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Krona One', sans-serif;
+  font-size: 16px;
+  z-index: 999;
+}
+.submit-hover-color{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateX(-101%);
+  transition: all .25s ease-in-out;
+  background-color: var(--aqua-medio);
+  z-index: 998;
 }
 
 /*-TROCAR-*/
+.ja-tem-conta{
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--aqua-claro);
+}
+.ja-tem-conta h2{
+  font-size: 14px;
+}
+.ja-tem-conta a{
+  font-size: 16px;
+  color: var(--aqua-medio);
+}
+
 .pra-login, .pra-cadastro{
   text-decoration: underline;
   cursor: pointer;
@@ -89,13 +252,13 @@ article{
 }
 
 
+/*-----===EFEITOS===-----*/
+#email-login:focus ~ .email-login-label, #email-login:valid ~ .email-login-label,
+#senha-login:focus ~ .senha-login-label, #senha-login:valid ~ .senha-login-label{
+  font-size: 14px;
+  top: -10%;
+}
 
-
-
-
-
-
-
-.form-login, .form-cadastro{
-  color: white;
+#submit-login h1:hover ~ .submit-hover-color{
+  transform: translateX(0);
 }

@@ -1,4 +1,11 @@
-<h1 style="color: white;"><?php var_dump($_SESSION)?></h1>
+<h1 style="color: white;">
+    <?php
+        if(!isset($_SESSION['id'])){
+            //"Revivendo" a sessão pra poder utilizar as variáveis dela
+            session_start();
+        }
+    ?>
+</h1>
 
 <header>
     <div class="header-top">

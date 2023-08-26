@@ -16,7 +16,6 @@
     //Verificar se existe o email e senha na hora do login
     if(!isset($_POST['email-login']) || !isset($_POST['senha-login'])){
         session_start();
-        $_SESSION['campos-vazios'] = true;
         header("Location: ../../View/pages/viewLoginCadastro.php");
     }
     else{
@@ -47,12 +46,10 @@
             $_SESSION['cpf'] = $usuario['cpf'];
             $_SESSION['rg'] = $usuario['rg'];
 
-            $_SESSION['campos-vazios'] = false;
             // Responder com um JSON indicando sucesso
             header("Location: ../../View/pages/viewConta.php");
         }
         else{
-            $_SESSION['campos-vazios'] = false;
             header("Location: ../../View/pages/viewLoginCadastro.php");
         }
     }

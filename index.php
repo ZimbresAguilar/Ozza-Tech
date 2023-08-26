@@ -1,5 +1,4 @@
 <?php
-    session_start();
     //-----===Referenciando arquivos===-----
     // Conexão com o banco de dados
     require "src/Model/DBConnectionLocal.php";
