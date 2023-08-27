@@ -29,7 +29,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <!--Own-->
     <link rel="stylesheet" href="css/universal.css">
-    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/index/card.css">
+    <link rel="stylesheet" href="css/index/banner.css">
 </head>
 
 <body>
@@ -37,6 +38,8 @@
 
     <main>
         <article>
+            <?php include "src/View/index/carrossel-banner.php"?>
+
             <?php include "src/View/index/carossel-lancamentos.php"?>
 
             <?php include "src/View/index/carrossel-promocoes.php"?>

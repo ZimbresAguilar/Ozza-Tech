@@ -43,3 +43,11 @@ create table carrinhos(
     constraint foreign key(idPedido) references pedidos(idPedidos),
     constraint foreign key(idCliente) references clientes(idClientes)
 );
+
+create table midias(
+	idMidias int not null auto_increment,
+    nome varchar(300) not null,
+    secao varchar(200) not null,
+    ativo boolean not null,
+    primary key(idMidias)
+);

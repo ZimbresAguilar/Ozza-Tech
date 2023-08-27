@@ -19,11 +19,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#">SOBRE</a>
+                    <a href="#">CATEGORIAS</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#">CATEGORIAS</a>
+                    <a href="#">CONTATO</a>
                 </li>
 
                 <li class="nav-item">
