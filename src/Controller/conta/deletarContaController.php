@@ -4,7 +4,7 @@
     }
 
     // Por algum motivo o conexao.php não tá sendo chamado
-    include("../../Model/conexao.php");
+    include "../../Model/conexao.php";
 
     if($_SERVER["REQUEST_METHOD"] == "DELETE" && isset($_GET["id"])){
         //Pra previnir SQLInjection, limpa o campo (usando uma função do mysqli)
