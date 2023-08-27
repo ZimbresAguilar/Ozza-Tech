@@ -46,6 +46,7 @@
             $_SESSION['cpf'] = $usuario['cpf'];
             $_SESSION['rg'] = $usuario['rg'];
 
+            $_SESSION['campos-vazios'] = false;
             // Responder com um JSON indicando sucesso
             header("Location: ../../View/pages/viewConta.php");
         }

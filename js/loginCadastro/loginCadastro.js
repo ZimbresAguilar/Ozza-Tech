@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     //-----===VARIÁVEIS===-----//
     const cadastro = document.querySelector(".cadastro-container");
