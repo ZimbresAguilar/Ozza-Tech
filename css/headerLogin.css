@@ -1,0 +1,75 @@
+/*-----===HEADER===-----*/
+header{
+    top: 0;
+    min-height: 50px;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    z-index: 1002;
+}
+
+/*---=Header Top=---*/
+.header-top, .header-top-left, .header-top-right,
+nav, .nav-content, .nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-top{
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--azul-escuro);
+}
+.header-top-left, .header-top-right{
+    height: 100%;
+    width: 25%;
+}
+/*-Header Top Left-*/
+/*-Header Top Center-*/
+nav{
+    height: 100%;
+    width: 50%;
+}
+.nav-content{
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.nav-item{
+    height: 100%;
+    width: auto;
+}
+.nav-item a{
+    text-decoration: none;
+    color: var(--aqua-claro);
+    font-size: 15px;
+}
+/*-Header Top Right-*/
+.site-theme-btn-container, .shopping-kart-btn-container, .user-account-btn-container{
+    height: 50%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Temporariamente (usar Krita) */
+    filter: invert();
+}
+.site-theme-btn-container a, .shopping-kart-btn-container a, .user-account-btn-container a{
+    height: 100%;
+    width: 100%;
+}
+.site-theme-btn-container a img, .shopping-kart-btn-container a img, .user-account-btn-container a img{
+    height: 100%;
+}
+
+/*---=Header Bottom=---*/
+.header-bottom{
+    display: none;
+}

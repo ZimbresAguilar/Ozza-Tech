@@ -20,6 +20,7 @@
     <!--Own-->
     <link rel="stylesheet" href="/css/universal.css">
     <link rel="stylesheet" href="/css/loginCadastro.css">
+    <link rel="stylesheet" href="/css/headerLogin.css">
 </head>
 
 <body>
@@ -35,7 +36,13 @@
             </section>
 
             <section class="login-cadastro-img-container">
+                <figure class="cadastro-img-container">
+                    <img src="/assets/imagens/business_meeting_idea.jpg" alt="">
+                </figure>
 
+                <figure class="login-img-container">
+                    <img src="/assets/imagens/business_meeting.jpg" alt="">
+                </figure>
             </section>
 
             <section class="login-container">

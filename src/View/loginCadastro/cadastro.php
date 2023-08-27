@@ -4,33 +4,33 @@
 
 <form action="/src/Controller/loginCadastro/cadastrarController.php" method="POST" class="form-cadastro">
     <fieldset class="nome-cadastro">
-        <label for="nome-cadastro">Nome</label>
-        <input type="text" name="nome-cadastro" id="nome-cadastro">
+        <input type="text" name="nome-cadastro" id="nome-cadastro" required>
+        <label for="nome-cadastro" class="nome-cadastro-label">Nome</label>
     </fieldset>
 
     <fieldset class="sobrenome-cadastro">
-        <label for="sobrenome-cadastro">Sobrenome</label>
-        <input type="text" name="sobrenome-cadastro" id="sobrenome-cadastro">
+        <input type="text" name="sobrenome-cadastro" id="sobrenome-cadastro" required>
+        <label for="sobrenome-cadastro" class="sobrenome-cadastro-label">Sobrenome</label>
     </fieldset>
 
     <fieldset class="cpf-cadastro">
-        <label for="cpf-cadastro">CPF</label>
-        <input type="text" name="cpf-cadastro" id="cpf-cadastro">
+        <input type="text" name="cpf-cadastro" id="cpf-cadastro" required>
+        <label for="cpf-cadastro" class="cpf-cadastro-label">CPF</label>
     </fieldset>
 
     <fieldset class="rg-cadastro">
-        <label for="rg-cadastro">RG</label>
-        <input type="text" name="rg-cadastro" id="rg-cadastro">
+        <input type="text" name="rg-cadastro" id="rg-cadastro" required>
+        <label for="rg-cadastro" class="rg-cadastro-label">RG</label>
     </fieldset>
 
     <fieldset class="email-cadastro">
-        <label for="email-cadastro">Email</label>
-        <input type="email" name="email-cadastro" id="email-cadastro">
+        <input type="text" name="email-cadastro" id="email-cadastro" required>
+        <label for="email-cadastro" class="email-cadastro-label">Email</label>
     </fieldset>
 
     <fieldset class="senha-cadastro">
-        <label for="senha-cadastro">Senha</label>
-        <input type="password" name="senha-cadastro" id="senha-cadastro">
+        <input type="password" name="senha-cadastro" id="senha-cadastro" required>
+        <label for="senha-cadastro" class="senha-cadastro-label">Senha</label>
     </fieldset>
 
     <fieldset class="pessoa-cadastro">
@@ -42,16 +42,19 @@
 
     <fieldset class="checkbox1-cadastro">
         <input type="checkbox" name="checkbox1-cadastro" id="checkbox1-cadastro">
-        <label for="checkbox1-cadastro">Aceito receber marketing da Ozza Tech</label>
+        <label for="checkbox1-cadastro" class="checkbox1-cadastro-label">Aceito receber marketing da Ozza Tech</label>
     </fieldset>
 
     <fieldset class="checkbox2-cadastro">
         <input type="checkbox" name="checkbox2-cadastro" id="checkbox2-cadastro">
-        <label for="checkbox2-cadastro">Concordo com os termos de aceite e políticas de privacidade da Ozza Tech</label>
+        <label for="checkbox2-cadastro" class="checkbox2-cadastro-label">Concordo com os termos de aceite e políticas de privacidade da Ozza Tech</label>
     </fieldset>
 
     <fieldset class="submit-cadastro">
-        <input type="submit" value="CRIAR CONTA" id="submit-cadastro">
+        <<button type="submit" value="" id="submit-cadastro">
+                <h1>CRIAR CONTA</h1>
+                <div class="submit-hover-color"></div>
+            </button>
     </fieldset>
 </form>
 

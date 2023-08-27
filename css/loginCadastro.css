@@ -53,7 +53,7 @@ article{
 /*---=Cadastro Container=--*/
 .cadastro-container{
   min-height: 450px;
-  height: 90%;
+  height: 100%;
   width: 50%;
   position: absolute;
   display: flex;
@@ -63,25 +63,179 @@ article{
 
   transform: translateX(-151%);
   transition: all .5s ease-in-out;
+}
 
-  background-color: var(--azul-escuro);
+.form-cadastro{
+  height: 85%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.nome-cadastro, .sobrenome-cadastro,
+.cpf-cadastro, .rg-cadastro{
+  height: 13%;
+  width: 45%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.nome-cadastro-label, .sobrenome-cadastro-label,
+.cpf-cadastro-label, .rg-cadastro-label{
+  position: absolute;
+  top: 36%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  font-size: 15px;
+  color: var(--aqua-medio);
+  transition: all .25s ease-in-out;
+}
+#nome-cadastro, #sobrenome-cadastro,
+#cpf-cadastro, #rg-cadastro{
+  height: 60%;
+  width: calc(95% - 30px);
+  padding: 0 15px;
+  outline: none;
+  background-color: transparent;
+  border: solid 1px var(--aqua-medio);
+  border-radius: .5em;
+  font-family: 'Krona One', sans-serif;
+  font-size: 14px;
+  color: var(--aqua-claro);
+}
+
+.email-cadastro, .senha-cadastro, .pessoa-cadastro{
+  height: 13%;
+  width: 96%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.email-cadastro-label, .senha-cadastro-label{
+  position: absolute;
+  top: 36%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  font-size: 15px;
+  color: var(--aqua-medio);
+  transition: all .25s ease-in-out;
+}
+#email-cadastro, #senha-cadastro, #pessoa-cadastro{
+  height: 60%;
+  width: calc(95% - 40px);
+  padding: 0 20px;
+  outline: none;
+  background-color: transparent;
+  border: solid 1px var(--aqua-medio);
+  border-radius: .5em;
+  font-family: 'Krona One', sans-serif;
+  font-size: 14px;
+  color: var(--aqua-claro);
+}
+#pessoa-cadastro{
+  width: 95%;
+  cursor: pointer;
+}
+
+.checkbox1-cadastro, .checkbox2-cadastro{
+  height: 10%;
+  width: 85%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: none;
+}
+#checkbox1-cadastro, #checkbox2-cadastro{
+  height: 20px;
+  width: 20px;
+  border: solid 1px var(--aqua-medio);
+  border-radius: .25em;
+  cursor: pointer;
+}
+.checkbox1-cadastro-label, .checkbox2-cadastro-label{
+  height: 100%;
+  width: 80%;
+  padding: 0 0 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 14px;
+  color: var(--aqua-medio);
+}
+
+.submit-cadastro{
+  height: 15%;
+  width: 90%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+#submit-cadastro{
+  height: 60%;
+  width: 80%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: .5em;
+  outline: none;
+  background-color: var(--aqua-claro);
+  overflow: hidden;
+}
+#submit-cadastro h1{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Krona One', sans-serif;
+  font-size: 16px;
+  z-index: 999;
 }
 
 /*---=Imagem Container=---*/
 .login-cadastro-img-container{
   height: 100%;
   width: 50%;
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   transform: translateX(-50%);
   transition: all .5s ease-in-out;
-
-  background-color: var(--azul-medio);
 }
+.cadastro-img-container, .login-img-container{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+}
+.cadastro-img-container img{ height: 100%; }
+.login-img-container img{ height: 100%; }
 
 /*---=Login Container=---*/
 .login-container{
@@ -92,7 +246,7 @@ article{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   transform: translateX(50%);
   transition: all .5s ease-in-out;
@@ -100,7 +254,7 @@ article{
 
 /*-Login Cabeçalho-*/
 .cabecalho{
-  height: 15%;
+  height: 10%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -134,14 +288,14 @@ article{
 
 .email-login-label, .senha-login-label{
   position: absolute;
-  top: 37.5%;
+  top: 39%;
   left: 5%;
   display: flex;
   align-items: center;
   justify-items: center;
   font-size: 15px;
   color: var(--aqua-medio);
-  transition: all .5s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 #email-login, #senha-login{
   height: 60%;
@@ -153,7 +307,7 @@ article{
   border-radius: .5em;
   font-family: 'Krona One', sans-serif;
   font-size: 14px;
-  color: var(--aqua-medio);
+  color: var(--aqua-claro);
 }
 #senha-login{
   width: calc(85% - 15px);
@@ -177,7 +331,7 @@ article{
 #checkbox-login{
   height: 20px;
   width: 20px;
-  border: solid 1px var(--aqua-medio);
+  border: solid 1px var(--aqua-claro);
   border-radius: .25em;
   cursor: pointer;
 }
@@ -228,7 +382,7 @@ article{
 
 /*-TROCAR-*/
 .ja-tem-conta{
-  height: 15%;
+  height: 5%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -261,5 +415,20 @@ article{
 }
 
 #submit-login h1:hover ~ .submit-hover-color{
+  transform: translateX(0);
+}
+
+
+#nome-cadastro:focus ~ .nome-cadastro-label, #nome-cadastro:valid ~ .nome-cadastro-label,
+#sobrenome-cadastro:focus ~ .sobrenome-cadastro-label, #sobrenome-cadastro:valid ~ .sobrenome-cadastro-label,
+#cpf-cadastro:focus ~ .cpf-cadastro-label, #cpf-cadastro:valid ~ .cpf-cadastro-label,
+#rg-cadastro:focus ~ .rg-cadastro-label, #rg-cadastro:valid ~ .rg-cadastro-label,
+#email-cadastro:focus ~ .email-cadastro-label, #email-cadastro:valid ~ .email-cadastro-label,
+#senha-cadastro:focus ~ .senha-cadastro-label, #senha-cadastro:valid ~ .senha-cadastro-label{
+  font-size: 14px;
+  top: -12.5%;
+}
+
+#submit-cadastro h1:hover ~ .submit-hover-color{
   transform: translateX(0);
 }

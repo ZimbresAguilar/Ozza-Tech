@@ -60,14 +60,20 @@
         </div>
     </div>
 
-    <div id="header-bottom" class="header-bottom">
-        <form action="" method="post" class="search-bar-form">
-            <fieldset class="search-bar">
-                <input type="text" name="search-bar-content" class="search-bar-content" id="search-bar-content"
-                    placeholder="Digite aqui...">
-                <input type="submit" value="" name="search-bar-submit" class="search-bar-submit"
-                    id="search-bar-submit">
-            </fieldset>
-        </form>
-    </div>
+    <?php
+        $currentPage = basename($_SERVER['PHP_SELF']);
+
+        if($currentPage != "viewLoginCadastro.php"){ ?>
+
+        <div id="header-bottom" class="header-bottom">
+            <form action="" method="post" class="search-bar-form">
+                <fieldset class="search-bar">
+                    <input type="text" name="search-bar-content" class="search-bar-content" id="search-bar-content"
+                        placeholder="Digite aqui...">
+                    <input type="submit" value="" name="search-bar-submit" class="search-bar-submit"
+                        id="search-bar-submit">
+                </fieldset>
+            </form>
+        </div>
+    <?php } ?>
 </header>

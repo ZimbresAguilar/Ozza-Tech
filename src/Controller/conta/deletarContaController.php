@@ -4,7 +4,7 @@
     }
 
     // Por algum motivo o conexao.php não tá sendo chamado
-    include("../Model/conexao.php");
+    include("../../Model/conexao.php");
 
     if($_SERVER["REQUEST_METHOD"] == "DELETE" && isset($_GET["id"])){
         //Pra previnir SQLInjection, limpa o campo (usando uma função do mysqli)
@@ -28,11 +28,12 @@
         session_destroy();
 
         // Após concluir a exclusão devolver resposta pro javascript (feita em json)
-        $response = array("success" => true);
+        $response = array("success" => true, "message" => "ok");
         echo json_encode($response);
 
     }
     else{
-        echo "Erro: ID do item não fornecido ou método inválido.";
+        $response = array("success" => false, "message" => "erro");
+        echo json_encode($response);
     }
 ?>

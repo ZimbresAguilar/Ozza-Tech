@@ -63,6 +63,7 @@
                                             <a href="">
                                                 <img src="assets/icones/1413908.png" alt="">
                                             </a>
+                                            <div class="categoria-button-hover-color"></div>
                                         </figure>
                                     </div>
                                 </div>
