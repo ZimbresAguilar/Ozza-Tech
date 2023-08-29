@@ -36,7 +36,9 @@ article {
     align-items: center;
     justify-content: center;
     border: none;
-    font-size: 24px;
+    font-size: 28px;
+    font-family: 'Krona One', sans-serif;
+    color: var(--cinza-claro);
     background-color: transparent;
     cursor: pointer;
     z-index: 200;
