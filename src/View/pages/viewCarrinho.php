@@ -1,7 +1,7 @@
 <?php
     include "../../Controller/protectController.php";
     // Controller do carrinho
-    include "../../Controller/carrinho/carrinhoController.php";
+    include "../../Controller/carrinho/listarCarrinhoController.php";
 ?>
 
 <!DOCTYPE html>
