@@ -17,7 +17,6 @@ main{
     justify-content: center;
     overflow-y: auto;
     border-radius: 1em;
-    background-color: var(--azul-medio);
 }
 
 /*---=Carrinho Cabeçalho=---*/
@@ -27,6 +26,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--azul-medio);
 }
 .carrinho-cabecalho h1{
     font-size: 22px;
