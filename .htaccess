@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirecionar URLs sem extensão para o arquivo PHP correspondente
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

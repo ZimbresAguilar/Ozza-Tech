@@ -42,24 +42,4 @@
             <h1>EDITAR</h1>
         </button>
     </div>
-
-    <!--Precisa desse enctype pra entender que é arquivo, não texto-->
-    <form enctype="multipart/form-data" class="upar-midia" method="POST" action="/src/Controller/conta/midiaController.php">
-        <fieldset class="midia">
-            <select name="secao-midia" id="secao-midia">
-                <option value="banner">Banner</option>
-            </select>
-
-            <select name="ativo-midia" id="ativo-midia">
-                <option value="0">Não Ativo</option>
-                <option value="1">Ativo</option>
-            </select>
-
-            <input type="file" name="arquivo-midia" id="arquivo-midia">
-
-            <button type="submit" class="btn-midia" dado="midia">
-                <h1>Upar Midia</h1>
-            </button>
-        </fieldset>
-</form>
 </div>

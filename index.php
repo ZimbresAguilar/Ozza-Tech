@@ -53,6 +53,7 @@
 </body>
 
 <script src="/js/universal/headerScroll.js"></script>
+<script src="/js/index/carrosselBanner.js"></script>
 <script src="/js/index/carroselCards.js"></script>
 
 </html>
