@@ -12,6 +12,7 @@ function headerPosition(){
   if (currentScrollPosition > lastScrollPosition) {
     headerBottom.style.opacity = '0';
     headerBottom.style.pointerEvents = 'none';
+    headerBottom.style.display = 'none';
   } else {
     headerBottom.style.opacity = '1';
     headerBottom.style.pointerEvents = 'auto';

@@ -1,7 +1,7 @@
 
 <h1 style="color: white;">
     <?php
-        if(!isset($_SESSION['id'])){
+        if(!isset($_SESSION)){
             //"Revivendo" a sessão pra poder utilizar as variáveis dela
             session_start();
         }
